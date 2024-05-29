@@ -1,0 +1,968 @@
+[
+  {
+    "bodega": [
+      {
+        "coordenadasUbicacion": "40.4168° N, 3.7038° W",
+        "descripcion": "Bodega familiar con más de 100 años de tradición en la elaboración de vinos.",
+        "fechaUltimaActualizacion": "2023-12-15",
+        "historia": "Fundada en 1910 por la familia García, la bodega se ha mantenido en manos de la misma familia durante cuatro generaciones.",
+        "nombre": "Bodega García",
+        "periodoActualizacion": "Anual",
+        "regionVitivinicola": {
+          "nombre": "Mar del Plata",
+          "descripcion": "Mar del Plata tiene un clima marítimo que contribuye a la producción de vinos frescos y aromáticos."
+        }
+      },
+      {
+        "coordenadasUbicacion": "45.4642° N, 9.1900° E",
+        "descripcion": "Bodega boutique especializada en la producción de vinos orgánicos.",
+        "fechaUltimaActualizacion": "2023-10-20",
+        "historia": "La bodega fue establecida en 2005 por un grupo de amigos apasionados por el vino y el respeto al medio ambiente.",
+        "nombre": "Bodega Verde",
+        "periodoActualizacion": "Semestral",
+        "regionVitivinicola": {
+          "nombre": "Córdoba Norte",
+          "descripcion": "Córdoba Norte se destaca por sus bodegas que producen vinos de alta calidad, aprovechando sus suelos ricos y condiciones climáticas favorables."
+        }
+      },
+      {
+        "coordenadasUbicacion": "39.6578° N, 8.1393° W",
+        "descripcion": "Bodega moderna con tecnología de última generación.",
+        "fechaUltimaActualizacion": "2023-11-30",
+        "historia": "Inaugurada en 2017 por un consorcio de inversores internacionales, la bodega se ha destacado por su innovación y calidad.",
+        "nombre": "Bodega Innovadora",
+        "periodoActualizacion": "Trimestral",
+        "regionVitivinicola": {
+          "nombre": "Campinas",
+          "descripcion": "Campinas es reconocida por su creciente industria vitivinícola, produciendo vinos de uvas adaptadas al clima tropical."
+        }
+      },
+      {
+        "coordenadasUbicacion": "38.7223° N, 9.1393° W",
+        "descripcion": "Bodega familiar con viñedos centenarios.",
+        "fechaUltimaActualizacion": "2023-09-05",
+        "historia": "Construida en 1890 por el bisabuelo de la actual propietaria, la bodega ha sido gestionada por la misma familia durante más de 130 años.",
+        "nombre": "Bodega Centenaria",
+        "periodoActualizacion": "Anual",
+        "regionVitivinicola": {
+          "nombre": "Niteroi",
+          "descripcion": "Niteroi tiene un pequeño pero creciente número de viñedos que producen vinos destinados principalmente al consumo local."
+        }
+      }
+    ],
+    "pais": [
+      {
+        "nombre": "Argentina",
+        "provincias": [
+          {
+            "nombre": "Buenos Aires",
+            "regiones": [
+              {
+                "nombre": "La Plata",
+                "descripcion": "La Plata es una región muy beneficiosa para la producción de vinos debido a su clima templado y suelos fértiles."
+              },
+              {
+                "nombre": "Mar del Plata",
+                "descripcion": "Mar del Plata tiene un clima marítimo que contribuye a la producción de vinos frescos y aromáticos."
+              }
+            ]
+          },
+          {
+            "nombre": "Córdoba",
+            "regiones": [
+              {
+                "nombre": "Córdoba Norte",
+                "descripcion": "Córdoba Norte se destaca por sus bodegas que producen vinos de alta calidad, aprovechando sus suelos ricos y condiciones climáticas favorables."
+              },
+              {
+                "nombre": "Villa Carlos Paz",
+                "descripcion": "Villa Carlos Paz, aunque más conocida por el turismo, también alberga viñedos que producen vinos boutique."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nombre": "Brasil",
+        "provincias": [
+          {
+            "nombre": "Sao Paulo",
+            "regiones": [
+              {
+                "nombre": "Sao Paulo Sur",
+                "descripcion": "Sao Paulo Sur cuenta con varias bodegas emergentes que se benefician del clima variado para producir vinos innovadores."
+              },
+              {
+                "nombre": "Campinas",
+                "descripcion": "Campinas es reconocida por su creciente industria vitivinícola, produciendo vinos de uvas adaptadas al clima tropical."
+              }
+            ]
+          },
+          {
+            "nombre": "Rio de Janeiro",
+            "regiones": [
+              {
+                "nombre": "Rio de Janeiro Sur",
+                "descripcion": "Rio de Janeiro Sur está desarrollando su industria vinícola con plantaciones experimentales que muestran buen potencial."
+              },
+              {
+                "nombre": "Niteroi",
+                "descripcion": "Niteroi tiene un pequeño pero creciente número de viñedos que producen vinos destinados principalmente al consumo local."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nombre": "México",
+        "provincias": [
+          {
+            "nombre": "Yucatán",
+            "regiones": [
+              {
+                "nombre": "Mérida",
+                "descripcion": "Mérida está explorando la producción de vinos con uvas adaptadas al clima cálido de la región."
+              },
+              {
+                "nombre": "Progreso",
+                "descripcion": "Progreso está comenzando a establecer viñedos que aprovechan las brisas marinas para el cultivo de uvas de calidad."
+              }
+            ]
+          },
+          {
+            "nombre": "Guerrero",
+            "regiones": [
+              {
+                "nombre": "Acapulco",
+                "descripcion": "Acapulco tiene un clima tropical que presenta desafíos y oportunidades únicas para la viticultura en pequeña escala."
+              },
+              {
+                "nombre": "Zihuatanejo",
+                "descripcion": "Zihuatanejo está incursionando en la viticultura con viñedos experimentales que buscan diversificar la producción agrícola local."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "vinos": [
+      {
+        "aniada": 2018,
+        "imagenEtiqueta": "imgen1",
+        "nombre": "El Supremo",
+        "notaDeCata": 4,
+        "precio": 12000,
+        "varietal": [
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 20
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 15
+          }
+        ],
+        "bodega": {
+          "coordenadasUbicacion": "40.4168° N, 3.7038° W",
+          "descripcion": "Bodega familiar con más de 100 años de tradición en la elaboración de vinos.",
+          "fechaUltimaActualizacion": "2023-12-15",
+          "historia": "Fundada en 1910 por la familia García, la bodega se ha mantenido en manos de la misma familia durante cuatro generaciones.",
+          "nombre": "Bodega García",
+          "periodoActualizacion": "Anual",
+          "regionVitivinicola": {
+            "nombre": "Mar del Plata",
+            "descripcion": "Mar del Plata tiene un clima marítimo que contribuye a la producción de vinos frescos y aromáticos."
+          }
+        },
+        "reseña": [
+          {
+            "comentario": "Excelente vino, gran relación calidad-precio.",
+            "esPremium": false,
+            "fechaResenia": "2023-07-15",
+            "puntaje": 4
+          },
+          {
+            "comentario": "Un vino excepcional, perfecto para ocasiones especiales.",
+            "esPremium": true,
+            "fechaResenia": "2023-08-20",
+            "puntaje": 5
+          }
+        ]
+      },
+      {
+        "aniada": 2015,
+        "imagenEtiqueta": "imgen2",
+        "nombre": "La Estrella",
+        "notaDeCata": 8,
+        "precio": 27000,
+        "varietal": [
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 20
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 15
+          }
+        ],
+        "bodega": {
+          "coordenadasUbicacion": "38.7223° N, 9.1393° W",
+          "descripcion": "Bodega familiar con viñedos centenarios.",
+          "fechaUltimaActualizacion": "2023-09-05",
+          "historia": "Construida en 1890 por el bisabuelo de la actual propietaria, la bodega ha sido gestionada por la misma familia durante más de 130 años.",
+          "nombre": "Bodega Centenaria",
+          "periodoActualizacion": "Anual",
+          "regionVitivinicola": {
+            "nombre": "Niteroi",
+            "descripcion": "Niteroi tiene un pequeño pero creciente número de viñedos que producen vinos destinados principalmente al consumo local."
+          }
+        },
+        "reseña": [
+          {
+            "comentario": "Un vino delicioso, lo recomiendo ampliamente.",
+            "esPremium": true,
+            "fechaResenia": "2023-10-10",
+            "puntaje": 4
+          },
+          {
+            "comentario": "Buena relación calidad-precio, pero nada extraordinario.",
+            "esPremium": false,
+            "fechaResenia": "2023-11-25",
+            "puntaje": 3
+          },
+          {
+            "comentario": "Un vino único, me encantó la complejidad de sabores.",
+            "esPremium": true,
+            "fechaResenia": "2023-12-30",
+            "puntaje": 5
+          }
+        ]
+      },
+      {
+        "aniada": 2012,
+        "imagenEtiqueta": "imgen3",
+        "nombre": "El Gran Reserva",
+        "notaDeCata": 5,
+        "precio": 18000,
+        "varietal": [
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 10
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 25
+          }
+        ],
+        "bodega": {
+          "coordenadasUbicacion": "45.4642° N, 9.1900° E",
+          "descripcion": "Bodega boutique especializada en la producción de vinos orgánicos.",
+          "fechaUltimaActualizacion": "2023-10-20",
+          "historia": "La bodega fue establecida en 2005 por un grupo de amigos apasionados por el vino y el respeto al medio ambiente.",
+          "nombre": "Bodega Verde",
+          "periodoActualizacion": "Semestral",
+          "regionVitivinicola": {
+            "nombre": "Córdoba Norte",
+            "descripcion": "Córdoba Norte se destaca por sus bodegas que producen vinos de alta calidad, aprovechando sus suelos ricos y condiciones climáticas favorables."
+          }
+        },
+        "reseña": [
+          {
+            "comentario": "No lo volvería a comprar, bastante ordinario.",
+            "esPremium": false,
+            "fechaResenia": "2024-01-15",
+            "puntaje": 2
+          },
+          {
+            "comentario": "Un vino decente, pero esperaba algo más por el precio.",
+            "esPremium": true,
+            "fechaResenia": "2024-02-20",
+            "puntaje": 3
+          }
+        ]
+      },
+      {
+        "aniada": 2019,
+        "imagenEtiqueta": "imgen4",
+        "nombre": "La Cumbre",
+        "notaDeCata": 9,
+        "precio": 42000,
+        "varietal": [
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 10
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 5
+          }
+        ],
+        "bodega": {
+          "coordenadasUbicacion": "40.4168° N, 3.7038° W",
+          "descripcion": "Bodega familiar con más de 100 años de tradición en la elaboración de vinos.",
+          "fechaUltimaActualizacion": "2023-12-15",
+          "historia": "Fundada en 1910 por la familia García, la bodega se ha mantenido en manos de la misma familia durante cuatro generaciones.",
+          "nombre": "Bodega García",
+          "periodoActualizacion": "Anual",
+          "regionVitivinicola": {
+            "nombre": "Mar del Plata",
+            "descripcion": "Mar del Plata tiene un clima marítimo que contribuye a la producción de vinos frescos y aromáticos."
+          }
+        },
+        "reseña": [
+          {
+            "comentario": "No cumplió con mis expectativas, bastante decepcionante.",
+            "esPremium": false,
+            "fechaResenia": "2023-09-05",
+            "puntaje": 2
+          },
+          {
+            "comentario": "Buena relación calidad-precio, pero nada extraordinario.",
+            "esPremium": false,
+            "fechaResenia": "2023-11-25",
+            "puntaje": 3
+          }
+        ]
+      },
+      {
+        "aniada": 2013,
+        "imagenEtiqueta": "imgen5",
+        "nombre": "El Dorado",
+        "notaDeCata": 3,
+        "precio": 25000,
+        "varietal": [
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 5
+          },
+          {
+            "descripcion": "Variedad tinta española con sabores a frutas rojas, vainilla y especias. Es la uva principal en muchos vinos tintos de España.",
+            "porcentajeDeComposicion": 5
+          }
+        ],
+        "bodega": {
+          "coordenadasUbicacion": "40.4168° N, 3.7038° W",
+          "descripcion": "Bodega familiar con más de 100 años de tradición en la elaboración de vinos.",
+          "fechaUltimaActualizacion": "2023-12-15",
+          "historia": "Fundada en 1910 por la familia García, la bodega se ha mantenido en manos de la misma familia durante cuatro generaciones.",
+          "nombre": "Bodega García",
+          "periodoActualizacion": "Anual",
+          "regionVitivinicola": {
+            "nombre": "Mar del Plata",
+            "descripcion": "Mar del Plata tiene un clima marítimo que contribuye a la producción de vinos frescos y aromáticos."
+          }
+        },
+        "reseña": [
+          {
+            "comentario": "Buena relación calidad-precio, pero nada extraordinario.",
+            "esPremium": false,
+            "fechaResenia": "2023-11-25",
+            "puntaje": 3
+          },
+          {
+            "comentario": "Un vino único, me encantó la complejidad de sabores.",
+            "esPremium": true,
+            "fechaResenia": "2023-12-30",
+            "puntaje": 5
+          },
+          {
+            "comentario": "No lo volvería a comprar, bastante ordinario.",
+            "esPremium": false,
+            "fechaResenia": "2024-01-15",
+            "puntaje": 2
+          }
+        ]
+      },
+      {
+        "aniada": 2022,
+        "imagenEtiqueta": "imgen6",
+        "nombre": "La Perla",
+        "notaDeCata": 7,
+        "precio": 38000,
+        "varietal": [
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 15
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 10
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 25
+          }
+        ],
+        "bodega": {
+          "coordenadasUbicacion": "38.7223° N, 9.1393° W",
+          "descripcion": "Bodega familiar con viñedos centenarios.",
+          "fechaUltimaActualizacion": "2023-09-05",
+          "historia": "Construida en 1890 por el bisabuelo de la actual propietaria, la bodega ha sido gestionada por la misma familia durante más de 130 años.",
+          "nombre": "Bodega Centenaria",
+          "periodoActualizacion": "Anual",
+          "regionVitivinicola": {
+            "nombre": "Niteroi",
+            "descripcion": "Niteroi tiene un pequeño pero creciente número de viñedos que producen vinos destinados principalmente al consumo local."
+          }
+        },
+        "reseña": [
+          {
+            "comentario": "Excelente vino, gran relación calidad-precio.",
+            "esPremium": false,
+            "fechaResenia": "2023-07-15",
+            "puntaje": 4
+          },
+          {
+            "comentario": "Un vino excepcional, perfecto para ocasiones especiales.",
+            "esPremium": true,
+            "fechaResenia": "2023-08-20",
+            "puntaje": 5
+          },
+          {
+            "comentario": "Un vino delicioso, lo recomiendo ampliamente.",
+            "esPremium": true,
+            "fechaResenia": "2023-10-10",
+            "puntaje": 4
+          },
+          {
+            "comentario": "Un vino único, me encantó la complejidad de sabores.",
+            "esPremium": true,
+            "fechaResenia": "2023-12-30",
+            "puntaje": 5
+          }
+        ]
+      },
+      {
+        "aniada": 2017,
+        "imagenEtiqueta": "imgen7",
+        "nombre": "El Majestuoso",
+        "notaDeCata": 6,
+        "precio": 15000,
+        "varietal": [
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 25
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 10
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 5
+          }
+        ],
+        "bodega": {
+          "coordenadasUbicacion": "38.7223° N, 9.1393° W",
+          "descripcion": "Bodega familiar con viñedos centenarios.",
+          "fechaUltimaActualizacion": "2023-09-05",
+          "historia": "Construida en 1890 por el bisabuelo de la actual propietaria, la bodega ha sido gestionada por la misma familia durante más de 130 años.",
+          "nombre": "Bodega Centenaria",
+          "periodoActualizacion": "Anual",
+          "regionVitivinicola": {
+            "nombre": "Niteroi",
+            "descripcion": "Niteroi tiene un pequeño pero creciente número de viñedos que producen vinos destinados principalmente al consumo local."
+          }
+        },
+        "reseña": [
+          {
+            "comentario": "Un vino decente, pero esperaba algo más por el precio.",
+            "esPremium": true,
+            "fechaResenia": "2024-02-20",
+            "puntaje": 3
+          },
+          {
+            "comentario": "Un vino muy equilibrado y agradable al paladar.",
+            "esPremium": false,
+            "fechaResenia": "2024-03-05",
+            "puntaje": 4
+          }
+        ]
+      },
+      {
+        "aniada": 2011,
+        "imagenEtiqueta": "imgen8",
+        "nombre": "La Leyenda",
+        "notaDeCata": 10,
+        "precio": 48000,
+        "varietal": [
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 10
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 25
+          }
+        ],
+        "bodega": {
+          "coordenadasUbicacion": "45.4642° N, 9.1900° E",
+          "descripcion": "Bodega boutique especializada en la producción de vinos orgánicos.",
+          "fechaUltimaActualizacion": "2023-10-20",
+          "historia": "La bodega fue establecida en 2005 por un grupo de amigos apasionados por el vino y el respeto al medio ambiente.",
+          "nombre": "Bodega Verde",
+          "periodoActualizacion": "Semestral",
+          "regionVitivinicola": {
+            "nombre": "Córdoba Norte",
+            "descripcion": "Córdoba Norte se destaca por sus bodegas que producen vinos de alta calidad, aprovechando sus suelos ricos y condiciones climáticas favorables."
+          }
+        },
+        "reseña": [
+          {
+            "comentario": "Un vino muy equilibrado y agradable al paladar.",
+            "esPremium": false,
+            "fechaResenia": "2024-03-05",
+            "puntaje": 4
+          },
+          {
+            "comentario": "Definitivamente uno de los mejores vinos que he probado.",
+            "esPremium": true,
+            "fechaResenia": "2024-04-10",
+            "puntaje": 5
+          }
+        ]
+      },
+      {
+        "aniada": 2021,
+        "imagenEtiqueta": "imgen9",
+        "nombre": "El Noble",
+        "notaDeCata": 2,
+        "precio": 35000,
+        "varietal": [
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 20
+          },
+          {
+            "descripcion": "Variedad tinta española con sabores a frutas rojas, vainilla y especias. Es la uva principal en muchos vinos tintos de España.",
+            "porcentajeDeComposicion": 5
+          }
+        ],
+        "bodega": {
+          "coordenadasUbicacion": "38.7223° N, 9.1393° W",
+          "descripcion": "Bodega familiar con viñedos centenarios.",
+          "fechaUltimaActualizacion": "2023-09-05",
+          "historia": "Construida en 1890 por el bisabuelo de la actual propietaria, la bodega ha sido gestionada por la misma familia durante más de 130 años.",
+          "nombre": "Bodega Centenaria",
+          "periodoActualizacion": "Anual",
+          "regionVitivinicola": {
+            "nombre": "Niteroi",
+            "descripcion": "Niteroi tiene un pequeño pero creciente número de viñedos que producen vinos destinados principalmente al consumo local."
+          }
+        },
+        "reseña": [
+          {
+            "comentario": "No lo volvería a comprar, bastante ordinario.",
+            "esPremium": false,
+            "fechaResenia": "2024-01-15",
+            "puntaje": 2
+          },
+          {
+            "comentario": "Un vino decente, pero esperaba algo más por el precio.",
+            "esPremium": true,
+            "fechaResenia": "2024-02-20",
+            "puntaje": 3
+          }
+        ]
+      },
+      {
+        "aniada": 2014,
+        "imagenEtiqueta": "imgen10",
+        "nombre": "La Gloria",
+        "notaDeCata": 7,
+        "precio": 5000,
+        "varietal": [
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 10
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 25
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 10
+          }
+        ],
+        "bodega": {
+          "coordenadasUbicacion": "39.6578° N, 8.1393° W",
+          "descripcion": "Bodega moderna con tecnología de última generación.",
+          "fechaUltimaActualizacion": "2023-11-30",
+          "historia": "Inaugurada en 2017 por un consorcio de inversores internacionales, la bodega se ha destacado por su innovación y calidad.",
+          "nombre": "Bodega Innovadora",
+          "periodoActualizacion": "Trimestral",
+          "regionVitivinicola": {
+            "nombre": "Campinas",
+            "descripcion": "Campinas es reconocida por su creciente industria vitivinícola, produciendo vinos de uvas adaptadas al clima tropical."
+          }
+        },
+        "reseña": [
+          {
+            "comentario": "Un vino único, me encantó la complejidad de sabores.",
+            "esPremium": true,
+            "fechaResenia": "2023-12-30",
+            "puntaje": 5
+          },
+          {
+            "comentario": "No lo volvería a comprar, bastante ordinario.",
+            "esPremium": false,
+            "fechaResenia": "2024-01-15",
+            "puntaje": 2
+          },
+          {
+            "comentario": "Un vino decente, pero esperaba algo más por el precio.",
+            "esPremium": true,
+            "fechaResenia": "2024-02-20",
+            "puntaje": 3
+          }
+        ]
+      },
+      {
+        "aniada": 2016,
+        "imagenEtiqueta": "imgen11",
+        "nombre": "El Triunfador",
+        "notaDeCata": 8,
+        "precio": 40000,
+        "varietal": [
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 15
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 10
+          }
+        ],
+        "bodega": {
+          "coordenadasUbicacion": "45.4642° N, 9.1900° E",
+          "descripcion": "Bodega boutique especializada en la producción de vinos orgánicos.",
+          "fechaUltimaActualizacion": "2023-10-20",
+          "historia": "La bodega fue establecida en 2005 por un grupo de amigos apasionados por el vino y el respeto al medio ambiente.",
+          "nombre": "Bodega Verde",
+          "periodoActualizacion": "Semestral",
+          "regionVitivinicola": {
+            "nombre": "Córdoba Norte",
+            "descripcion": "Córdoba Norte se destaca por sus bodegas que producen vinos de alta calidad, aprovechando sus suelos ricos y condiciones climáticas favorables."
+          }
+        },
+        "reseña": [
+          {
+            "comentario": "Un vino único, me encantó la complejidad de sabores.",
+            "esPremium": true,
+            "fechaResenia": "2023-12-30",
+            "puntaje": 5
+          },
+          {
+            "comentario": "Un vino muy equilibrado y agradable al paladar.",
+            "esPremium": false,
+            "fechaResenia": "2024-03-05",
+            "puntaje": 4
+          },
+          {
+            "comentario": "Definitivamente uno de los mejores vinos que he probado.",
+            "esPremium": true,
+            "fechaResenia": "2024-04-10",
+            "puntaje": 5
+          }
+        ]
+      },
+      {
+        "aniada": 2023,
+        "imagenEtiqueta": "imgen12",
+        "nombre": "La Excelencia",
+        "notaDeCata": 9,
+        "precio": 30000,
+        "varietal": [
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 20
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 15
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 25
+          }
+        ],
+        "bodega": {
+          "coordenadasUbicacion": "39.6578° N, 8.1393° W",
+          "descripcion": "Bodega moderna con tecnología de última generación.",
+          "fechaUltimaActualizacion": "2023-11-30",
+          "historia": "Inaugurada en 2017 por un consorcio de inversores internacionales, la bodega se ha destacado por su innovación y calidad.",
+          "nombre": "Bodega Innovadora",
+          "periodoActualizacion": "Trimestral",
+          "regionVitivinicola": {
+            "nombre": "Campinas",
+            "descripcion": "Campinas es reconocida por su creciente industria vitivinícola, produciendo vinos de uvas adaptadas al clima tropical."
+          }
+        },
+        "reseña": [
+          {
+            "comentario": "Un vino excepcional, perfecto para ocasiones especiales.",
+            "esPremium": true,
+            "fechaResenia": "2023-08-20",
+            "puntaje": 5
+          },
+          {
+            "comentario": "No cumplió con mis expectativas, bastante decepcionante.",
+            "esPremium": false,
+            "fechaResenia": "2023-09-05",
+            "puntaje": 2
+          }
+        ]
+      },
+      {
+        "aniada": 2010,
+        "imagenEtiqueta": "imgen13",
+        "nombre": "El Diamante",
+        "notaDeCata": 5,
+        "precio": 22000,
+        "varietal": [
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 15
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 10
+          }
+        ],
+        "bodega": {
+          "coordenadasUbicacion": "39.6578° N, 8.1393° W",
+          "descripcion": "Bodega moderna con tecnología de última generación.",
+          "fechaUltimaActualizacion": "2023-11-30",
+          "historia": "Inaugurada en 2017 por un consorcio de inversores internacionales, la bodega se ha destacado por su innovación y calidad.",
+          "nombre": "Bodega Innovadora",
+          "periodoActualizacion": "Trimestral",
+          "regionVitivinicola": {
+            "nombre": "Campinas",
+            "descripcion": "Campinas es reconocida por su creciente industria vitivinícola, produciendo vinos de uvas adaptadas al clima tropical."
+          }
+        },
+        "reseña": [
+          {
+            "comentario": "Buena relación calidad-precio, pero nada extraordinario.",
+            "esPremium": false,
+            "fechaResenia": "2023-11-25",
+            "puntaje": 3
+          },
+          {
+            "comentario": "No lo volvería a comprar, bastante ordinario.",
+            "esPremium": false,
+            "fechaResenia": "2024-01-15",
+            "puntaje": 2
+          },
+          {
+            "comentario": "Un vino decente, pero esperaba algo más por el precio.",
+            "esPremium": true,
+            "fechaResenia": "2024-02-20",
+            "puntaje": 3
+          }
+        ]
+      },
+      {
+        "aniada": 2020,
+        "imagenEtiqueta": "imgen14",
+        "nombre": "La Suprema",
+        "notaDeCata": 3,
+        "precio": 32000,
+        "varietal": [
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 25
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 10
+          }
+        ],
+        "bodega": {
+          "coordenadasUbicacion": "39.6578° N, 8.1393° W",
+          "descripcion": "Bodega moderna con tecnología de última generación.",
+          "fechaUltimaActualizacion": "2023-11-30",
+          "historia": "Inaugurada en 2017 por un consorcio de inversores internacionales, la bodega se ha destacado por su innovación y calidad.",
+          "nombre": "Bodega Innovadora",
+          "periodoActualizacion": "Trimestral",
+          "regionVitivinicola": {
+            "nombre": "Campinas",
+            "descripcion": "Campinas es reconocida por su creciente industria vitivinícola, produciendo vinos de uvas adaptadas al clima tropical."
+          }
+        },
+        "reseña": [
+          {
+            "comentario": "No lo volvería a comprar, bastante ordinario.",
+            "esPremium": false,
+            "fechaResenia": "2024-01-15",
+            "puntaje": 2
+          },
+          {
+            "comentario": "Un vino decente, pero esperaba algo más por el precio.",
+            "esPremium": true,
+            "fechaResenia": "2024-02-20",
+            "puntaje": 3
+          },
+          {
+            "comentario": "Un vino muy equilibrado y agradable al paladar.",
+            "esPremium": false,
+            "fechaResenia": "2024-03-05",
+            "puntaje": 4
+          }
+        ]
+      },
+      {
+        "aniada": 2013,
+        "imagenEtiqueta": "imgen15",
+        "nombre": "El Brillante",
+        "notaDeCata": 10,
+        "precio": 26000,
+        "varietal": [
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 10
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 25
+          },
+          {
+            "descripcion": "",
+            "porcentajeDeComposicion": 10
+          }
+        ],
+        "bodega": {
+          "coordenadasUbicacion": "40.4168° N, 3.7038° W",
+          "descripcion": "Bodega familiar con más de 100 años de tradición en la elaboración de vinos.",
+          "fechaUltimaActualizacion": "2023-12-15",
+          "historia": "Fundada en 1910 por la familia García, la bodega se ha mantenido en manos de la misma familia durante cuatro generaciones.",
+          "nombre": "Bodega García",
+          "periodoActualizacion": "Anual",
+          "regionVitivinicola": {
+            "nombre": "Mar del Plata",
+            "descripcion": "Mar del Plata tiene un clima marítimo que contribuye a la producción de vinos frescos y aromáticos."
+          }
+        },
+        "reseña": [
+          {
+            "comentario": "No cumplió con mis expectativas, bastante decepcionante.",
+            "esPremium": false,
+            "fechaResenia": "2023-09-05",
+            "puntaje": 2
+          },
+          {
+            "comentario": "Buena relación calidad-precio, pero nada extraordinario.",
+            "esPremium": false,
+            "fechaResenia": "2023-11-25",
+            "puntaje": 3
+          },
+          {
+            "comentario": "No lo volvería a comprar, bastante ordinario.",
+            "esPremium": false,
+            "fechaResenia": "2024-01-15",
+            "puntaje": 2
+          },
+          {
+            "comentario": "Un vino decente, pero esperaba algo más por el precio.",
+            "esPremium": true,
+            "fechaResenia": "2024-02-20",
+            "puntaje": 3
+          }
+        ]
+      }
+    ],
+    "reseñas": [
+      {
+        "comentario": "Excelente vino, gran relación calidad-precio.",
+        "esPremium": false,
+        "fechaResenia": "2023-07-15",
+        "puntaje": 4
+      },
+      {
+        "comentario": "Un vino excepcional, perfecto para ocasiones especiales.",
+        "esPremium": true,
+        "fechaResenia": "2023-08-20",
+        "puntaje": 5
+      },
+      {
+        "comentario": "No cumplió con mis expectativas, bastante decepcionante.",
+        "esPremium": false,
+        "fechaResenia": "2023-09-05",
+        "puntaje": 2
+      },
+      {
+        "comentario": "Un vino delicioso, lo recomiendo ampliamente.",
+        "esPremium": true,
+        "fechaResenia": "2023-10-10",
+        "puntaje": 4
+      },
+      {
+        "comentario": "Buena relación calidad-precio, pero nada extraordinario.",
+        "esPremium": false,
+        "fechaResenia": "2023-11-25",
+        "puntaje": 3
+      },
+      {
+        "comentario": "Un vino único, me encantó la complejidad de sabores.",
+        "esPremium": true,
+        "fechaResenia": "2023-12-30",
+        "puntaje": 5
+      },
+      {
+        "comentario": "No lo volvería a comprar, bastante ordinario.",
+        "esPremium": false,
+        "fechaResenia": "2024-01-15",
+        "puntaje": 2
+      },
+      {
+        "comentario": "Un vino decente, pero esperaba algo más por el precio.",
+        "esPremium": true,
+        "fechaResenia": "2024-02-20",
+        "puntaje": 3
+      },
+      {
+        "comentario": "Un vino muy equilibrado y agradable al paladar.",
+        "esPremium": false,
+        "fechaResenia": "2024-03-05",
+        "puntaje": 4
+      },
+      {
+        "comentario": "Definitivamente uno de los mejores vinos que he probado.",
+        "esPremium": true,
+        "fechaResenia": "2024-04-10",
+        "puntaje": 5
+      }
+    ],
+    "varietal": [
+      {
+        "descripcion": "",
+        "porcentajeDeComposicion": 20
+      },
+      {
+        "descripcion": "",
+        "porcentajeDeComposicion": 15
+      },
+      {
+        "descripcion": "",
+        "porcentajeDeComposicion": 10
+      },
+      {
+        "descripcion": "",
+        "porcentajeDeComposicion": 25
+      },
+      {
+        "descripcion": "",
+        "porcentajeDeComposicion": 10
+      },
+      {
+        "descripcion": "",
+        "porcentajeDeComposicion": 5
+      },
+      {
+        "descripcion": "Variedad tinta española con sabores a frutas rojas, vainilla y especias. Es la uva principal en muchos vinos tintos de España.",
+        "porcentajeDeComposicion": 5
+      }
+    ]
+  }
+]

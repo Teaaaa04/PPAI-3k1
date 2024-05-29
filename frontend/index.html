@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bonvino</title>
+  </head>
+  <body>
+    <header class="p-5 flex justify-between items-center bg-red-950">
+      <div class="h-20 w-20">
+        <img class="imagen_logo" src="./img/3135768.png" alt="foto_perfil" />
+      </div>
+      <h1 class="fuente text-6xl text-white">Bonvino</h1>
+      <nav>
+        <ul class="flex">
+          <li
+            class="mr-10 text-white text-xl hover:text-red-500 fuente transition-colors"
+          >
+            <a href="./index.html">Inicio</a>
+          </li>
+          <li
+            class="mr-10 text-white text-xl hover:text-red-500 fuente transition-colors"
+          >
+            <a href="#">Perfil</a>
+          </li>
+          <li
+            class="mr-10 text-white text-xl hover:text-red-500 fuente transition-colors"
+          >
+            <a href="#">Configuración</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="h-full w-1/2 flex flex-col items-center mt-16">
+      <div>
+        <button
+          class="m-5 bg-red-950 text-red-400 border border-red-400 border-b-4 font-medium overflow-hidden relative px-20 py-6 w-96 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
+        >
+          <span
+            class="bg-red-400 shadow-red-400 absolute -top-[150%] left-0 inline-flex w-96 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"
+          ></span>
+          Opiniones
+        </button>
+      </div>
+      <div>
+        <button
+          class="m-5 bg-red-950 text-red-400 border border-red-400 border-b-4 font-medium overflow-hidden relative px-20 py-6 w-96 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
+        >
+          <span
+            class="bg-red-400 shadow-red-400 absolute -top-[150%] left-0 inline-flex w-96 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"
+          ></span>
+          Catalogo de Vinos
+        </button>
+      </div>
+      <div>
+        <a href="./pages/GenerarReporte.html">
+          <button
+            class="m-5 bg-red-950 text-red-400 border border-red-400 border-b-4 font-medium overflow-hidden relative px-20 py-6 w-96 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
+          >
+            <span
+              class="bg-red-400 shadow-red-400 absolute -top-[150%] left-0 inline-flex w-96 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"
+            ></span>
+            Generar Ranking de Vinos
+          </button>
+        </a>
+      </div>
+    </main>
+  </body>
+</html>

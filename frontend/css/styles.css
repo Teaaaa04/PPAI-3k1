@@ -1,0 +1,10 @@
+body {
+  overflow-y: hidden;
+  background-image: url(../img/imagen_vino2.jpg);
+  background-size: cover; /*ajusta la imagen en donde esta contenida*/
+  background-repeat: no-repeat;
+}
+
+.fuente {
+  font-family: "Playfair Display", serif;
+}

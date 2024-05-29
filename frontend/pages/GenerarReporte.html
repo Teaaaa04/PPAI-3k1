@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Bonvino</title>
+  </head>
+  <body class="bg-gradient-to-b from-red-950 to-red-800 h-screen">
+    <header
+      class="bg-red-950 border-b-2 border-black p-5 flex justify-between items-center"
+    >
+      <div class="h-16 w-16">
+        <img class="imagen_logo" src="../img/3135768.png" alt="foto_perfil" />
+      </div>
+      <h1 class="fuente titulo text-5xl text-white">Bonvino</h1>
+      <nav>
+        <ul class="flex">
+          <li
+            class="mr-10 text-white text-xl hover:text-red-500 fuente transition-colors"
+          >
+            <a href="../index.html">Inicio</a>
+          </li>
+          <li
+            class="mr-10 text-white text-xl hover:text-red-500 fuente transition-colors"
+          >
+            <a href="#">Perfil</a>
+          </li>
+          <li
+            class="mr-10 text-white text-xl hover:text-red-500 fuente transition-colors"
+          >
+            <a href="#">Configuración</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="fuente">
+      <h2 class="text-center text-white text-2xl mt-6">
+        Generar Ranking top 10 vinos
+      </h2>
+      <form
+        class="mx-10 mt-10 text-center flex flex-col justify-around items-center"
+      >
+        <div class="flex justify-center items-center">
+          <h3 class="text-center text-white mr-5 bg-red-950 p-5 rounded-xl">
+            Seleccione el periodo de generacion reporte:
+          </h3>
+          <div class="formulario bg-red-950 mr-2 p-3 rounded-xl text-white">
+            <label class="mr-2" for="fechaDesde">Fecha Desde:</label>
+            <input
+              class="bg-red-900 rounded-lg p-2"
+              type="date"
+              id="fechaDesde"
+              name=""
+            />
+          </div>
+          <div class="formulario bg-red-950 mr-2 p-3 rounded-xl text-white">
+            <label class="mr-2" for="fechaHasta">Fecha Hasta:</label>
+            <input
+              class="bg-red-900 rounded-lg p-2"
+              type="date"
+              id="fechaHasta"
+              name=""
+            />
+          </div>
+        </div>
+        <div
+          class="formulario bg-red-950 mr-2 p-3 rounded-3xl text-white mt-10 text-center w-4/5"
+        >
+          <label class="mr-4" for="">Tipo de Reseña:</label>
+          <select
+            class="bg-red-900 shadow rounded-xl p-2 tr"
+            id="selectReseña"
+            name=""
+          >
+            <option value="1">Reseñas normales</option>
+            <option value="2">Reseñas de Sommelier</option>
+            <option value="3">Reseñas de Amigos</option>
+          </select>
+        </div>
+        <div
+          class="formulario bg-red-950 mr-2 p-3 mt-8 rounded-3xl flex flex-col items-center w-4/5 px-10"
+        >
+          <p class="mr-10 mb-4 text-white" for="">Formato del Reporte:</p>
+          <div class="w-full flex justify-around">
+            <div class="flex">
+              <label for="pdf" class="text-white mr-3 h-6">PDF</label>
+              <input
+                class="w-6 h-6"
+                type="radio"
+                name="formatoReporte"
+                value="pdf"
+                id="pdf"
+              />
+            </div>
+            <div class="flex">
+              <label for="excel" class="text-white mr-3 h-6">Excel</label>
+              <input
+                class="w-6 h-6"
+                type="radio"
+                name="formatoReporte"
+                value="excel"
+                id="excel"
+              />
+            </div>
+            <div class="flex">
+              <label for="pantalla" class="text-white mr-3 h-6">Pantalla</label>
+              <input
+                class="w-6 h-6"
+                type="radio"
+                name="formatoReporte"
+                value="pantalla"
+                id="pantalla"
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          id="ButtonConfirm"
+          class="mt-7 bg-red-950 text-white border border-red-400 border-b-4 font-medium overflow-hidden relative px-20 py-6 w-96 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
+          type="button"
+        >
+          <span
+            class="bg-red-400 shadow-red-400 absolute -top-[150%] left-0 inline-flex w-96 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"
+          ></span>
+          Generar Reporte
+        </button>
+      </form>
+    </main>
+    <script type="module" src="../index.js"></script>
+  </body>
+</html>
