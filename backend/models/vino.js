@@ -74,8 +74,11 @@ class Vino {
   // metodos
 
   // buscar datos de la bodega implica buscar su nombre, región y país.
-  buscarDatosBodega() {
-    return this._bodega.nombre, this._bodega.obtenerRegionYPais();
+  buscarDatosBodega(provincias, pais) {
+    return [
+      this._bodega.nombre,
+      this._bodega.obtenerRegionYPais(provincias, pais),
+    ];
   }
 
   // USADO

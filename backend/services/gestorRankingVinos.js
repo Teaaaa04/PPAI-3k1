@@ -53,7 +53,7 @@ class GestorRankingVinos {
 
   // metodos
   // función principal
-  opcionGenerarRanking(vinos) {
+  opcionGenerarRanking(vinos, provincias, pais) {
     let vinosConReseniaDeSommelier = this.buscarVinosConReseniaDeSommelier(
       fechaDesde,
       fechaHasta,
@@ -62,9 +62,12 @@ class GestorRankingVinos {
     // ESTO YA FUNCIONA
     console.log(vinosConReseniaDeSommelier);
 
-    // let datosVinoReporte = this.buscarDatosParaReporte(
-    //   vinosConReseniaDeSommelier
-    // );
+    let datosVinoReporte = this.buscarDatosParaReporte(
+      vinosConReseniaDeSommelier,
+      provincias,
+      pais
+    );
+    console.log(datosVinoReporte);
 
     // let vinosRanking = this.ordenarVinosPorRanking(datosVinoReporte);
   }
@@ -94,13 +97,13 @@ class GestorRankingVinos {
   }
 
   // por cada vino que cree un json con los datos necesarios nombre, precio, datos bodega, varietales (descripciones), puntaje promedio y puntaje promedio sommelier
-  buscarDatosParaReporte(vinosConReseniaDeSommelier) {
+  buscarDatosParaReporte(vinosConReseniaDeSommelier, provincias, pais) {
     let datosVinosReporte = [];
     vinosConReseniaDeSommelier.forEach((vino) => {
       let VinoReporte = {
         nombre: vino.nombre,
         precio: vino.precio,
-        datosBodega: vino.buscarDatosBodega(), // nombre, región y país
+        datosBodega: vino.buscarDatosBodega(provincias, pais), // nombre, región y país
         varietal: vino.buscarVarietales(), // descripción del varietal
         puntajePromedio: vino.calcularPuntajePromedio(),
         puntajePromedioSommelier: vino.calcularPuntajePromedioSommelier(),

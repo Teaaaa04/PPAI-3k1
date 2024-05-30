@@ -16,21 +16,26 @@ async function loadBodegas() {
     return fetch(ruta).then((response) =>
       response.json().then((data) => {
         let listaBodegas = data[0].bodega;
-        let bodegasTemp = [];
-        listaBodegas.forEach((bodega) => {
-          bodegasTemp.push(
-            new Bodega(
-              bodega.coordenadasUbicacion,
-              bodega.nombre,
-              bodega.descripcion,
-              bodega.fechaUltimaActualizacion,
-              bodega.historia,
-              bodega.periodoActualizacion,
-              bodega.regionVitivinicola
-            )
+        let bodegasTemp = listaBodegas.map((bodega) => {
+          // Convertir regionVitivinicola en una instancia de la clase RegionVitivinicola
+          let regionTemp = new RegionVitivinicola(
+            bodega.regionVitivinicola.nombre,
+            bodega.regionVitivinicola.descripcion,
+            bodega.regionVitivinicola.fechaUltimaActualizacion
+          );
+
+          // Crear una instancia de Bodega con la instancia de RegionVitivinicola
+          return new Bodega(
+            bodega.coordenadasUbicacion,
+            bodega.nombre,
+            bodega.descripcion,
+            bodega.fechaUltimaActualizacion,
+            bodega.historia,
+            bodega.periodoActualizacion,
+            regionTemp
           );
         });
-        // console.log(bodegasTemp);
+        // Devolución del array
         return bodegasTemp;
       })
     );
@@ -145,6 +150,7 @@ async function loadVinos() {
     return fetch(ruta).then((response) =>
       response.json().then((data) => {
         let listaVinos = data[0].vinos;
+
         // Crear un nuevo array para almacenar los objetos creados
         let vinosTemp = listaVinos.map((vino) => {
           // Convertir cada reseña en una instancia de la clase Resenia
@@ -158,18 +164,44 @@ async function loadVinos() {
               )
           );
 
-          // Crear una instancia de Vino con las instancias de Resenia
+          // Convertir bodega en una instancia de la clase Bodega
+
+          let regionVitivinicolaTemp = new RegionVitivinicola(
+            vino.bodega.regionVitivinicola.nombre,
+            vino.bodega.regionVitivinicola.descripcion,
+            vino.bodega.regionVitivinicola.fechaUltimaActualizacion
+          );
+
+          let bodegaTemp = new Bodega(
+            vino.bodega.coordenadasUbicacion,
+            vino.bodega.nombre,
+            vino.bodega.descripcion,
+            vino.bodega.fechaUltimaActualizacion,
+            vino.bodega.historia,
+            vino.bodega.periodoActualizacion,
+            regionVitivinicolaTemp
+          );
+
+          // Convertir varietal en una instancia de la clase Varietal
+          let varietalTemp = new Varietal(
+            vino.varietal.nombre,
+            vino.varietal.descripcion,
+            vino.varietal.fechaUltimaActualizacion
+          );
+
+          // Crear una instancia de Vino con las instancias de Resenia, Bodega y Varietal
           return new Vino(
             vino.aniada,
             vino.imagenEtiqueta,
             vino.nombre,
             vino.notaDeCata,
             vino.precio,
-            vino.varietal,
-            vino.bodega,
+            varietalTemp,
+            bodegaTemp,
             reseniasTemp
           );
         });
+
         // Devolucion del array
         return vinosTemp;
       })
@@ -234,7 +266,7 @@ buttonConfirm.addEventListener("click", async () => {
       tipoReseña
     );
 
-    gestor.opcionGenerarRanking(vinos);
+    gestor.opcionGenerarRanking(vinos, provincias, paises);
   } catch (error) {
     console.error("Error:", error);
   }

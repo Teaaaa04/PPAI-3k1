@@ -67,9 +67,10 @@ class Bodega {
 
   // metodos
 
-  obtenerRegionPais() {
+  obtenerRegionYPais(provincia, pais) {
     return (
-      this.regionVitivinicola.nombre, this.regionVitivinicola.obtenerPais()
+      this._regionVitivinicola.nombre,
+      this._regionVitivinicola.obtenerPais(provincia, pais)
     );
   }
 }
