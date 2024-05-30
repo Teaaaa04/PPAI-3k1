@@ -154,11 +154,11 @@
         "precio": 12000,
         "varietal": [
           {
-            "descripcion": "",
+            "descripcion": "Un varietal de uva tinto con cuerpo, conocido por sus taninos firmes y aromas de grosella negra, tabaco y cedro",
             "porcentajeDeComposicion": 20
           },
           {
-            "descripcion": "",
+            "descripcion": "Varietal tinto suave con sabores de cereza, ciruela y un toque de chocolate. Menos tánico que el Cabernet Sauvignon",
             "porcentajeDeComposicion": 15
           }
         ],
@@ -197,11 +197,11 @@
         "precio": 27000,
         "varietal": [
           {
-            "descripcion": "",
+            "descripcion": "Un varietal de uva tinto con cuerpo, conocido por sus taninos firmes y aromas de grosella negra, tabaco y cedro",
             "porcentajeDeComposicion": 20
           },
           {
-            "descripcion": "",
+            "descripcion": "Varietal tinto suave con sabores de cereza, ciruela y un toque de chocolate. Menos tánico que el Cabernet Sauvignon",
             "porcentajeDeComposicion": 15
           }
         ],
@@ -246,11 +246,11 @@
         "precio": 18000,
         "varietal": [
           {
-            "descripcion": "",
+            "descripcion": "Vino tinto elegante y ligero con aromas de fresas, frambuesas y notas terrosas. Ideal para maridar con aves y pescados.",
             "porcentajeDeComposicion": 10
           },
           {
-            "descripcion": "",
+            "descripcion": "Varietal tinto robusto con sabores de mora, arándano y especias, a menudo con un toque de pimienta negra.",
             "porcentajeDeComposicion": 25
           }
         ],
@@ -289,11 +289,11 @@
         "precio": 42000,
         "varietal": [
           {
-            "descripcion": "",
+            "descripcion": "Vino tinto elegante y ligero con aromas de fresas, frambuesas y notas terrosas. Ideal para maridar con aves y pescados.",
             "porcentajeDeComposicion": 10
           },
           {
-            "descripcion": "",
+            "descripcion": "Varietal blanco con cuerpo, con sabores de manzana, pera y un toque de mantequilla y roble, dependiendo del estilo.",
             "porcentajeDeComposicion": 5
           }
         ],
@@ -332,7 +332,7 @@
         "precio": 25000,
         "varietal": [
           {
-            "descripcion": "",
+            "descripcion": "Varietal blanco con cuerpo, con sabores de manzana, pera y un toque de mantequilla y roble, dependiendo del estilo",
             "porcentajeDeComposicion": 5
           },
           {
@@ -381,15 +381,15 @@
         "precio": 38000,
         "varietal": [
           {
-            "descripcion": "",
+            "descripcion": "Varietal tinto suave con sabores de cereza, ciruela y un toque de chocolate. Menos tánico que el Cabernet Sauvignon",
             "porcentajeDeComposicion": 15
           },
           {
-            "descripcion": "",
+            "descripcion": "Vino tinto elegante y ligero con aromas de fresas, frambuesas y notas terrosas. Ideal para maridar con aves y pescados.",
             "porcentajeDeComposicion": 10
           },
           {
-            "descripcion": "",
+            "descripcion": "Varietal tinto robusto con sabores de mora, arándano y especias, a menudo con un toque de pimienta negra.",
             "porcentajeDeComposicion": 25
           }
         ],
@@ -440,15 +440,15 @@
         "precio": 15000,
         "varietal": [
           {
-            "descripcion": "",
+            "descripcion": "Varietal tinto robusto con sabores de mora, arándano y especias, a menudo con un toque de pimienta negra.",
             "porcentajeDeComposicion": 25
           },
           {
-            "descripcion": "",
+            "descripcion": "Vino tinto con cuerpo, conocido por sus intensos sabores de frutas negras, ciruela y notas de cacao.",
             "porcentajeDeComposicion": 10
           },
           {
-            "descripcion": "",
+            "descripcion": "Varietal blanco con cuerpo, con sabores de manzana, pera y un toque de mantequilla y roble, dependiendo del estilo",
             "porcentajeDeComposicion": 5
           }
         ],
@@ -487,11 +487,11 @@
         "precio": 48000,
         "varietal": [
           {
-            "descripcion": "",
+            "descripcion": "Vino tinto con cuerpo, conocido por sus intensos sabores de frutas negras, ciruela y notas de cacao.",
             "porcentajeDeComposicion": 10
           },
           {
-            "descripcion": "",
+            "descripcion": "Varietal tinto robusto con sabores de mora, arándano y especias, a menudo con un toque de pimienta negra.",
             "porcentajeDeComposicion": 25
           }
         ],
@@ -530,7 +530,7 @@
         "precio": 35000,
         "varietal": [
           {
-            "descripcion": "",
+            "descripcion": "Un varietal de uva tinto con cuerpo, conocido por sus taninos firmes y aromas de grosella negra, tabaco y cedro",
             "porcentajeDeComposicion": 20
           },
           {
@@ -573,15 +573,15 @@
         "precio": 5000,
         "varietal": [
           {
-            "descripcion": "",
+            "descripcion": "Vino tinto elegante y ligero con aromas de fresas, frambuesas y notas terrosas. Ideal para maridar con aves y pescados.",
             "porcentajeDeComposicion": 10
           },
           {
-            "descripcion": "",
+            "descripcion": "Varietal tinto robusto con sabores de mora, arándano y especias, a menudo con un toque de pimienta negra.",
             "porcentajeDeComposicion": 25
           },
           {
-            "descripcion": "",
+            "descripcion": "Vino tinto elegante y ligero con aromas de fresas, frambuesas y notas terrosas. Ideal para maridar con aves y pescados.",
             "porcentajeDeComposicion": 10
           }
         ],
@@ -626,11 +626,11 @@
         "precio": 40000,
         "varietal": [
           {
-            "descripcion": "",
+            "descripcion": "Varietal tinto suave con sabores de cereza, ciruela y un toque de chocolate. Menos tánico que el Cabernet Sauvignon",
             "porcentajeDeComposicion": 15
           },
           {
-            "descripcion": "",
+            "descripcion": "Vino tinto elegante y ligero con aromas de fresas, frambuesas y notas terrosas. Ideal para maridar con aves y pescados.",
             "porcentajeDeComposicion": 10
           }
         ],
@@ -675,15 +675,15 @@
         "precio": 30000,
         "varietal": [
           {
-            "descripcion": "",
+            "descripcion": "Un varietal de uva tinto con cuerpo, conocido por sus taninos firmes y aromas de grosella negra, tabaco y cedro",
             "porcentajeDeComposicion": 20
           },
           {
-            "descripcion": "",
+            "descripcion": "Varietal tinto suave con sabores de cereza, ciruela y un toque de chocolate. Menos tánico que el Cabernet Sauvignon",
             "porcentajeDeComposicion": 15
           },
           {
-            "descripcion": "",
+            "descripcion": "Varietal tinto robusto con sabores de mora, arándano y especias, a menudo con un toque de pimienta negra.",
             "porcentajeDeComposicion": 25
           }
         ],
@@ -722,11 +722,11 @@
         "precio": 22000,
         "varietal": [
           {
-            "descripcion": "",
+            "descripcion": "Varietal tinto suave con sabores de cereza, ciruela y un toque de chocolate. Menos tánico que el Cabernet Sauvignon",
             "porcentajeDeComposicion": 15
           },
           {
-            "descripcion": "",
+            "descripcion": "Vino tinto elegante y ligero con aromas de fresas, frambuesas y notas terrosas. Ideal para maridar con aves y pescados.",
             "porcentajeDeComposicion": 10
           }
         ],
@@ -771,11 +771,11 @@
         "precio": 32000,
         "varietal": [
           {
-            "descripcion": "",
+            "descripcion": "Varietal tinto robusto con sabores de mora, arándano y especias, a menudo con un toque de pimienta negra.",
             "porcentajeDeComposicion": 25
           },
           {
-            "descripcion": "",
+            "descripcion": "Vino tinto con cuerpo, conocido por sus intensos sabores de frutas negras, ciruela y notas de cacao.",
             "porcentajeDeComposicion": 10
           }
         ],
@@ -820,15 +820,15 @@
         "precio": 26000,
         "varietal": [
           {
-            "descripcion": "",
+            "descripcion": "Vino tinto con cuerpo, conocido por sus intensos sabores de frutas negras, ciruela y notas de cacao.",
             "porcentajeDeComposicion": 10
           },
           {
-            "descripcion": "",
+            "descripcion": "Varietal tinto robusto con sabores de mora, arándano y especias, a menudo con un toque de pimienta negra.",
             "porcentajeDeComposicion": 25
           },
           {
-            "descripcion": "",
+            "descripcion": "Vino tinto elegante y ligero con aromas de fresas, frambuesas y notas terrosas. Ideal para maridar con aves y pescados.",
             "porcentajeDeComposicion": 10
           }
         ],
@@ -936,27 +936,27 @@
     ],
     "varietal": [
       {
-        "descripcion": "",
+        "descripcion": "Un varietal de uva tinto con cuerpo, conocido por sus taninos firmes y aromas de grosella negra, tabaco y cedro",
         "porcentajeDeComposicion": 20
       },
       {
-        "descripcion": "",
+        "descripcion": "Varietal tinto suave con sabores de cereza, ciruela y un toque de chocolate. Menos tánico que el Cabernet Sauvignon",
         "porcentajeDeComposicion": 15
       },
       {
-        "descripcion": "",
+        "descripcion": "Vino tinto elegante y ligero con aromas de fresas, frambuesas y notas terrosas. Ideal para maridar con aves y pescados.",
         "porcentajeDeComposicion": 10
       },
       {
-        "descripcion": "",
+        "descripcion": "Varietal tinto robusto con sabores de mora, arándano y especias, a menudo con un toque de pimienta negra.",
         "porcentajeDeComposicion": 25
       },
       {
-        "descripcion": "",
+        "descripcion": "Vino tinto con cuerpo, conocido por sus intensos sabores de frutas negras, ciruela y notas de cacao.",
         "porcentajeDeComposicion": 10
       },
       {
-        "descripcion": "",
+        "descripcion": "Varietal blanco con cuerpo, con sabores de manzana, pera y un toque de mantequilla y roble, dependiendo del estilo",
         "porcentajeDeComposicion": 5
       },
       {
