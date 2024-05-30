@@ -267,12 +267,23 @@ buttonConfirm.addEventListener("click", async () => {
     const gestor = new GestorRankingVinos(
       fechaDesde,
       fechaHasta,
-      "",
+      inputSeleccionado,
       tipoReseña
     );
     let ranking = gestor.opcionGenerarRanking(vinos, provincias, paises);
 
-    if (tipoReseña == 2 && inputSeleccionado == 3) {
+    // validar fechahasta mayor a fechadesde
+    if (fechaDesde >= fechaHasta) {
+      alert("La fecha desde debe ser menor a la fecha hasta");
+      return;
+    }
+    // validar que haya reseñas
+    if (ranking.length == 0) {
+      alert("No hay datos para mostrar");
+      return;
+    }
+
+    if (tipoReseña == 2 && inputSeleccionado == 3 ) {
       abrirModal(ranking);
     } else {
       if (tipoReseña == 2 && inputSeleccionado == 1) {
