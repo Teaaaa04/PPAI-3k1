@@ -78,13 +78,19 @@ class Vino {
     return this._bodega.nombre, this._bodega.obtenerRegionYPais();
   }
 
+  // USADO
   buscarReseñaSommelierEnPeríodo(fechaDesde, fechaHasta) {
     // devuelve true si al menos una reseña es de un sommelier y está en el período.
-    return this._resenias.some((resenia) => {
+    let listaADevolver = this._resenias.filter((resenia) => {
       return (
         resenia.esDelPeriodo(fechaDesde, fechaHasta) && resenia.sosDeSommelier()
       );
     });
+    if (listaADevolver.length > 0) {
+      return true;
+    } else {
+      return null;
+    }
   }
 
   buscarVarietales() {

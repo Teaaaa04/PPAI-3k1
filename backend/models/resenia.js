@@ -36,13 +36,20 @@ class Resenia {
 
   //metodos
   // Funcion para ver si la fecha de la reseña esta dentro de los rangos pasados por parametro
+  // USADO
   esDelPeriodo(fechaDesde, fechaHasta) {
-    if (this._fechaResenia >= fechaDesde && this._fechaResenia <= fechaHasta) {
+    if (
+      this._fechaResenia >= fechaDesde.value &&
+      this._fechaResenia <= fechaHasta.value
+    ) {
       return true;
+    } else {
+      return false;
     }
   }
 
   // Funcion que determina si la reseña es de un sommelier, es decir, es premium
+  // USADO
   sosDeSommelier() {
     return this._esPremium;
   }

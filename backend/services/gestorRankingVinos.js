@@ -3,16 +3,12 @@ class GestorRankingVinos {
     fechaDesde,
     fechaHasta,
     formaVisualizacionSeleccionado,
-    tipoReseniaSeleccionado,
-    vinosConReseniaDeSommelier,
-    vinosOrdenados
+    tipoReseniaSeleccionado
   ) {
     this._fechaDesde = fechaDesde;
     this._fechaHasta = fechaHasta;
     this._formaVisualizacionSeleccionado = formaVisualizacionSeleccionado;
     this._tipoReseniaSeleccionado = tipoReseniaSeleccionado;
-    this._vinosConReseniaDeSommelier = vinosConReseniaDeSommelier;
-    this._vinosOrdenados = vinosOrdenados;
   }
 
   // getters
@@ -42,7 +38,7 @@ class GestorRankingVinos {
   set fechaHasta(fechaHasta) {
     this.fechaHasta = fechaHasta;
   }
-  set formaVisualizacionDeleccionado(formaVisualizacionSeleccionado) {
+  set formaVisualizacionSeleccionado(formaVisualizacionSeleccionado) {
     this.formaVisualizacionSeleccionado = formaVisualizacionSeleccionado;
   }
   set tipoReseniaSeleccionado(tipoReseniaSeleccionado) {
@@ -57,25 +53,34 @@ class GestorRankingVinos {
 
   // metodos
   // función principal
-  opcionGenerarRanking() {
+  opcionGenerarRanking(vinos) {
     let vinosConReseniaDeSommelier = this.buscarVinosConReseniaDeSommelier(
       fechaDesde,
-      fechaHasta
+      fechaHasta,
+      vinos
     );
+    // ESTO YA FUNCIONA
+    console.log(vinosConReseniaDeSommelier);
 
-    let datosVinoReporte = this.buscarDatosParaReporte(
-      vinosConReseniaDeSommelier
-    );
+    // let datosVinoReporte = this.buscarDatosParaReporte(
+    //   vinosConReseniaDeSommelier
+    // );
 
-    let vinosRanking = this.ordenarVinosPorRanking(datosVinoReporte);
-    console.log(vinosRanking);
+    // let vinosRanking = this.ordenarVinosPorRanking(datosVinoReporte);
   }
 
-  buscarVinosConReseniaDeSommelier(fechaDesde, fechaHasta) {
-    let vinosConReseniaDeSommelier = vinos.filter((vino) => {
-      return vino.buscarReseñaSommelierEnPeríodo(fechaDesde, fechaHasta);
+  // USADO
+  buscarVinosConReseniaDeSommelier(fechaDesde, fechaHasta, vinos) {
+    const listaADevolver = [];
+    vinos.forEach((vino) => {
+      if (
+        vino.buscarReseñaSommelierEnPeríodo(fechaDesde, fechaHasta) !== null
+      ) {
+        listaADevolver.push(vino);
+      }
     });
-    return vinosConReseniaDeSommelier;
+
+    return listaADevolver;
   }
 
   // ordenamos los vinos por puntaje promedio sommelier de reseñas  de mejor a peor
@@ -89,9 +94,10 @@ class GestorRankingVinos {
   }
 
   // por cada vino que cree un json con los datos necesarios nombre, precio, datos bodega, varietales (descripciones), puntaje promedio y puntaje promedio sommelier
-  buscarDatosParaReporte() {
-    datosVinos = vinosConReseniaDeSommelier.forEach((vino) => {
-      let datosVinoReporte = {
+  buscarDatosParaReporte(vinosConReseniaDeSommelier) {
+    let datosVinosReporte = [];
+    vinosConReseniaDeSommelier.forEach((vino) => {
+      let VinoReporte = {
         nombre: vino.nombre,
         precio: vino.precio,
         datosBodega: vino.buscarDatosBodega(), // nombre, región y país
@@ -99,6 +105,7 @@ class GestorRankingVinos {
         puntajePromedio: vino.calcularPuntajePromedio(),
         puntajePromedioSommelier: vino.calcularPuntajePromedioSommelier(),
       };
+      datosVinosReporte.push(VinoReporte);
     });
     return datosVinosReporte;
   }

@@ -146,19 +146,28 @@ async function loadVinos() {
       response.json().then((data) => {
         let listaVinos = data[0].vinos;
         // Crear un nuevo array para almacenar los objetos creados
-        let vinosTemp = [];
-        listaVinos.forEach((vino) => {
-          vinosTemp.push(
-            new Vino(
-              vino.aniada,
-              vino.imagenEtiqueta,
-              vino.nombre,
-              vino.notaDeCata,
-              vino.precio,
-              vino.varietal,
-              vino.bodega,
-              vino.reseña
-            )
+        let vinosTemp = listaVinos.map((vino) => {
+          // Convertir cada reseña en una instancia de la clase Resenia
+          let reseniasTemp = vino.reseña.map(
+            (resenia) =>
+              new Reseña(
+                resenia.comentario,
+                resenia.esPremium,
+                resenia.fechaResenia,
+                resenia.puntaje
+              )
+          );
+
+          // Crear una instancia de Vino con las instancias de Resenia
+          return new Vino(
+            vino.aniada,
+            vino.imagenEtiqueta,
+            vino.nombre,
+            vino.notaDeCata,
+            vino.precio,
+            vino.varietal,
+            vino.bodega,
+            reseniasTemp
           );
         });
         // Devolucion del array
@@ -198,6 +207,7 @@ async function loadReseñas() {
 
 // BOTON
 let buttonConfirm = document.getElementById("ButtonConfirm");
+
 buttonConfirm.addEventListener("click", async () => {
   try {
     // COMIENZO DEL CASO DE USO
@@ -213,6 +223,7 @@ buttonConfirm.addEventListener("click", async () => {
     const fechaDesde = document.getElementById("fechaDesde").value;
     const fechaHasta = document.getElementById("fechaHasta").value;
     const tipoReseña = document.getElementById("selectReseña").value;
+
     //console.log(fechaDesde, fechaHasta, tipoReseña);
 
     // CREACION DEL GESTOR
@@ -220,10 +231,10 @@ buttonConfirm.addEventListener("click", async () => {
       fechaDesde,
       fechaHasta,
       "",
-      tipoReseña,
-      vinos
+      tipoReseña
     );
-    console.log(gestor);
+
+    gestor.opcionGenerarRanking(vinos);
   } catch (error) {
     console.error("Error:", error);
   }

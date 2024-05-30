@@ -178,12 +178,12 @@
           {
             "comentario": "Excelente vino, gran relación calidad-precio.",
             "esPremium": false,
-            "fechaResenia": "2023-07-15",
+            "fechaResenia": "2023-01-12",
             "puntaje": 4
           },
           {
             "comentario": "Un vino excepcional, perfecto para ocasiones especiales.",
-            "esPremium": true,
+            "esPremium": false,
             "fechaResenia": "2023-08-20",
             "puntaje": 5
           }
@@ -220,7 +220,7 @@
         "reseña": [
           {
             "comentario": "Un vino delicioso, lo recomiendo ampliamente.",
-            "esPremium": true,
+            "esPremium": false,
             "fechaResenia": "2023-10-10",
             "puntaje": 4
           },
@@ -232,7 +232,7 @@
           },
           {
             "comentario": "Un vino único, me encantó la complejidad de sabores.",
-            "esPremium": true,
+            "esPremium": false,
             "fechaResenia": "2023-12-30",
             "puntaje": 5
           }
