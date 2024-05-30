@@ -67,6 +67,7 @@ class Bodega {
 
   // metodos
 
+  // devuelve la region y el pais al que pertenece la bodega
   obtenerRegionYPais(provincia, paises) {
     return [
       this._regionVitivinicola.nombre,
@@ -74,8 +75,5 @@ class Bodega {
     ];
   }
 }
-
-//crear un bodega
-// console.log(bodega.obtenerRegionPais());
 
 export default Bodega;

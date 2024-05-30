@@ -70,6 +70,7 @@ class GestorRankingVinos {
     return vinosRanking;
   }
 
+  // buscamos los vinos con reseñas de sommelier en el período
   buscarVinosConReseniaDeSommelier(fechaDesde, fechaHasta, vinos) {
     const listaADevolver = [];
     vinos.forEach((vino) => {
@@ -83,17 +84,16 @@ class GestorRankingVinos {
     return listaADevolver;
   }
 
-  // ordenamos los vinos por puntaje promedio sommelier de reseñas  de mejor a peor
+  // ordenamos los vinosReporte por puntaje promedio sommelier de reseñas de mejor a peor
   ordenarVinosPorRanking(datosVinosReporte) {
     let vinosOrdenados = datosVinosReporte.sort((vino1, vino2) => {
       return vino2.puntajePromedioSommelier - vino1.puntajePromedioSommelier;
     });
-    //el ranking solo quiere 10 vinos
-    let vinosRanking = vinosOrdenados.slice(0, 10);
+    let vinosRanking = vinosOrdenados.slice(0, 10); // tomamos los 10 primeros
     return vinosRanking;
   }
 
-  // por cada vino que cree un json con los datos necesarios nombre, precio, datos bodega, varietales (descripciones), puntaje promedio y puntaje promedio sommelier
+  // buscamos los datos necesarios para el reporte de los vinos con reseñas de sommelier en el período
   buscarDatosParaReporte(vinosConReseniaDeSommelier, provincias, paises) {
     let datosVinosReporte = [];
     vinosConReseniaDeSommelier.forEach((vino) => {
@@ -101,9 +101,9 @@ class GestorRankingVinos {
         nombre: vino.nombre,
         precio: vino.precioARS,
         datosBodega: vino.buscarDatosBodega(provincias, paises), // nombre, región y país
-        varietal: vino.buscarVarietales(), // descripción del varietal
-        puntajePromedio: vino.calcularPuntajePromedio(),
-        puntajePromedioSommelier: vino.calcularPuntajePromedioSommelier(),
+        varietal: vino.buscarVarietales(), // descripción de los varietales
+        puntajePromedio: vino.calcularPuntajePromedio(), // puntaje promedio de todas las reseñas en el período
+        puntajePromedioSommelier: vino.calcularPuntajePromedioSommelier(), // puntaje promedio de las reseñas de sommelier en el período
       };
 
       datosVinosReporte.push(VinoReporte);
@@ -111,11 +111,7 @@ class GestorRankingVinos {
     return datosVinosReporte;
   }
 
-  crearReporteRanking() {}
-
-  validarPeriodo() {}
-
-  getConfirmacion() {}
+  tomarConfirmacion() {}
 }
 
 export default GestorRankingVinos;

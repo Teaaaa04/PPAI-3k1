@@ -21,10 +21,8 @@ class RegionVitivinicola {
 
   //metodos
 
-  // la region no conoce a que provincia pertenece, pero las provincias si conocen que regiones tienen,  además los paises tienen provincias, las provincias tienen un método obtenerPias() que devuelve el país, quiero obtener el pais de la región.
-
+  // devuelve el pais al que pertenece la region vitivinicola, recibe como parametros un array de provincias y un array de paises
   obtenerPais(provincias, paises) {
-    // buscar entre todas las provincias, la que tenga la regionVitivinicola con el nombre de la región actual
     let provincia = provincias.find((provincia) => {
       return provincia.regionesVitivinicolas.find(
         (region) => region.nombre === this._nombre

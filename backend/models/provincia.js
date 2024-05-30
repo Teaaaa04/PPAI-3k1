@@ -24,10 +24,11 @@ class Provincia {
   set regiones(regiones) {
     this._regiones = regiones;
   }
+
   // metodos
-  // funcion para obtener el pais de la provincia
+
+  // devuelve el pais al que pertenece la provincia, recibe como parametro un array de paises
   obtenerPais(paises) {
-    // encontrar el pais que tiene esta provincia
     let pais = paises.find((pais) => {
       return pais.provincias.find(
         (provincia) => provincia.nombre === this.nombre

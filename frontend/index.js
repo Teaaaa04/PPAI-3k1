@@ -1,3 +1,4 @@
+// importamos las clases necesarias
 import Bodega from "../backend/models/bodega.js";
 import Pais from "../backend/models/pais.js";
 import Provincia from "../backend/models/provincia.js";
@@ -7,13 +8,15 @@ import Varietal from "../backend/models/varietal.js";
 import Reseña from "../backend/models/resenia.js";
 import GestorRankingVinos from "../backend/services/gestorRankingVinos.js";
 import abrirModal from "./scripts/modal.js";
-// Definicion de la ruta donde se encuentran los objetos
+
+// CREAMOS LAS FUNCIONES QUE NOS PERMITIRAN INSTANCIAR LOS OBJETOS DE LAS CLASES A PARTIR DE LOS DATOS DEL JSON
+// ruta donde se encuentran los datos de los objetos en .json
 const ruta = "../../backend/data/objetos.json";
 
 // Funcion para cargar el array de bodegas, con datos extraidos del JSON
 async function loadBodegas() {
   try {
-    // Fetch the JSON file with the bodegas data
+    // Leer el archivo JSON con las bodegas
     return fetch(ruta).then((response) =>
       response.json().then((data) => {
         let listaBodegas = data[0].bodega;
@@ -87,7 +90,6 @@ async function loadProvincias() {
             );
           });
         });
-        // console.log(provinciasTemp);
         return provinciasTemp;
       })
     );
@@ -117,7 +119,7 @@ async function loadRegiones() {
         return regionesTemp;
       })
     );
-    // También podrías devolver las regiones o realizar otras operaciones aquí
+    // También podríamos devolver las regiones o realizar otras operaciones aquí
   } catch (error) {
     console.error("Error al cargar el JSON:", error);
   }
@@ -239,12 +241,14 @@ async function loadReseñas() {
   }
 }
 
-// BOTON
+// EVENTO AL HACER CLICK EN EL BOTON CONFIRMAR RANKING, COMIENZA LA EJECUCION DEL PROGRAMA
+
+// definimos el boton confirmar
 let buttonConfirm = document.getElementById("ButtonConfirm");
 
 buttonConfirm.addEventListener("click", async () => {
   try {
-    // COMIENZO DEL CASO DE USO
+    // cargamos los datos de los objetos en arrays
     const bodegas = await loadBodegas();
     const paises = await loadPaises();
     const provincias = await loadProvincias();
@@ -255,42 +259,53 @@ buttonConfirm.addEventListener("click", async () => {
     const vinos = await loadVinos();
     const reseñas = await loadReseñas();
 
-    // OBTENCION DE DATOS DEL HTML
+    // obtenemos los valores de los inputs necesarios por el gestor para generar el ranking
     const fechaDesde = document.getElementById("fechaDesde").value;
     const fechaHasta = document.getElementById("fechaHasta").value;
     const tipoReseña = document.getElementById("selectReseña").value;
+
     let inputSeleccionado = document.querySelector(
       'input[name="formatoReporte"]:checked'
-    ).value;
+    );
 
-    // CREACION DEL GESTOR
+    // la pantalla valida que se haya seleccionado un formato de reporte
+    if (inputSeleccionado == null) {
+      alert("Debe seleccionar un formato de reporte");
+      return;
+    } else {
+      inputSeleccionado = inputSeleccionado.value;
+    }
+
+    // la pantalla valida que la fecha desde sea menor a la fecha hasta
+    if (fechaDesde >= fechaHasta) {
+      alert("La fecha desde debe ser menor a la fecha hasta");
+      return;
+    }
+
+    // creamos una instancia de GestorRankingVinos con los datos obtenidos de los inputs
     const gestor = new GestorRankingVinos(
       fechaDesde,
       fechaHasta,
       inputSeleccionado,
       tipoReseña
     );
+
+    // invocamos a la funcion opcionGenerarRanking del gestor para obtener el ranking
     let ranking = gestor.opcionGenerarRanking(vinos, provincias, paises);
 
-    // validar fechahasta mayor a fechadesde
-    if (fechaDesde >= fechaHasta) {
-      alert("La fecha desde debe ser menor a la fecha hasta");
-      return;
-    }
-    // validar que haya reseñas
+    // la pantalla valida que haya reseñas para mostrar
     if (ranking.length == 0) {
       alert("No hay datos para mostrar");
       return;
     }
 
-    if (tipoReseña == 2 && inputSeleccionado == 3 ) {
+    // la pantalla abre el modal con el ranking
+    if (tipoReseña == 2) {
       abrirModal(ranking);
     } else {
-      if (tipoReseña == 2 && inputSeleccionado == 1) {
-        console.log("mostarPDF");
-      } else {
-        alert("No se puede visualizar el ranking con los datos seleccionados");
-      }
+      alert(
+        "No se puede visualizar el ranking de los vinos con ese tipo de reseña aún"
+      );
     }
   } catch (error) {
     console.error("Error:", error);

@@ -15,7 +15,6 @@ class Pais {
   get provincias() {
     return this._provincias;
   }
-  // agregar get y set de provincias
 
   // setters
   set nombre(nombre) {

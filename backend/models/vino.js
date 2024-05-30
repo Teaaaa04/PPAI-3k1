@@ -81,9 +81,8 @@ class Vino {
     ];
   }
 
-  // USADO
+  // buscar reseñas de sommelier en el período
   buscarReseñaSommelierEnPeríodo(fechaDesde, fechaHasta) {
-    // devuelve true si al menos una reseña es de un sommelier y está en el período.
     let listaADevolver = this._resenias.filter((resenia) => {
       return (
         resenia.esDelPeriodo(fechaDesde, fechaHasta) && resenia.sosDeSommelier()
@@ -96,14 +95,13 @@ class Vino {
     }
   }
 
+  // busca varietales, devuelve un array con las descripciones de los varietales
   buscarVarietales() {
-    // devuelve las descripciones de todos los varietales (array)
-
     return this._varietales.map((varietal) => varietal.descripcion);
   }
 
+  // calcula el puntaje promedio de todas las reseñas en el período
   calcularPuntajePromedio() {
-    // devuelve el promedio de puntaje de todas las reseñas
     let reseniasEnPeriodo = this._resenias.filter((resenia) => {
       return resenia.esDelPeriodo(fechaDesde, fechaHasta);
     });
@@ -114,8 +112,8 @@ class Vino {
     );
   }
 
+  // calcula el puntaje promedio de las reseñas de sommelier en el período
   calcularPuntajePromedioSommelier() {
-    // devuelve el promedio de puntaje de las reseñas de sommelier
     let reseniasEnCondicion = this._resenias.filter((resenia) => {
       return (
         resenia.esDelPeriodo(fechaDesde, fechaHasta) && resenia.sosDeSommelier()
