@@ -53,7 +53,7 @@ class GestorRankingVinos {
 
   // metodos
   // función principal
-  opcionGenerarRanking(vinos, provincias, pais) {
+  opcionGenerarRanking(vinos, provincias, paises) {
     let vinosConReseniaDeSommelier = this.buscarVinosConReseniaDeSommelier(
       fechaDesde,
       fechaHasta,
@@ -65,11 +65,13 @@ class GestorRankingVinos {
     let datosVinoReporte = this.buscarDatosParaReporte(
       vinosConReseniaDeSommelier,
       provincias,
-      pais
+      paises
     );
     console.log(datosVinoReporte);
 
-    // let vinosRanking = this.ordenarVinosPorRanking(datosVinoReporte);
+    console.log("mezclando");
+    let vinosRanking = this.ordenarVinosPorRanking(datosVinoReporte);
+    console.log(vinosRanking);
   }
 
   // USADO
@@ -97,17 +99,18 @@ class GestorRankingVinos {
   }
 
   // por cada vino que cree un json con los datos necesarios nombre, precio, datos bodega, varietales (descripciones), puntaje promedio y puntaje promedio sommelier
-  buscarDatosParaReporte(vinosConReseniaDeSommelier, provincias, pais) {
+  buscarDatosParaReporte(vinosConReseniaDeSommelier, provincias, paises) {
     let datosVinosReporte = [];
     vinosConReseniaDeSommelier.forEach((vino) => {
       let VinoReporte = {
         nombre: vino.nombre,
-        precio: vino.precio,
-        datosBodega: vino.buscarDatosBodega(provincias, pais), // nombre, región y país
+        precio: vino.precioARS,
+        datosBodega: vino.buscarDatosBodega(provincias, paises), // nombre, región y país
         varietal: vino.buscarVarietales(), // descripción del varietal
         puntajePromedio: vino.calcularPuntajePromedio(),
         puntajePromedioSommelier: vino.calcularPuntajePromedioSommelier(),
       };
+
       datosVinosReporte.push(VinoReporte);
     });
     return datosVinosReporte;

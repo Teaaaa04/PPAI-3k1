@@ -107,7 +107,7 @@ async function loadRegiones() {
           pais.provincias.forEach((provincia) => {
             provincia.regiones.forEach((region) => {
               regionesTemp.push(
-                new RegionVitivinicola(region.descripcion, region.nombre)
+                new RegionVitivinicola(region.nombre, region.descripcion)
               );
             });
           });
@@ -167,9 +167,8 @@ async function loadVinos() {
           // Convertir bodega en una instancia de la clase Bodega
 
           let regionVitivinicolaTemp = new RegionVitivinicola(
-            vino.bodega.regionVitivinicola.nombre,
             vino.bodega.regionVitivinicola.descripcion,
-            vino.bodega.regionVitivinicola.fechaUltimaActualizacion
+            vino.bodega.regionVitivinicola.nombre
           );
 
           let bodegaTemp = new Bodega(
@@ -183,10 +182,12 @@ async function loadVinos() {
           );
 
           // Convertir varietal en una instancia de la clase Varietal
-          let varietalTemp = new Varietal(
-            vino.varietal.nombre,
-            vino.varietal.descripcion,
-            vino.varietal.fechaUltimaActualizacion
+          let varietalTemp = vino.varietal.map(
+            (elVarietal) =>
+              new Varietal(
+                elVarietal.descripcion,
+                elVarietal.porcentajeDeComposicion
+              )
           );
 
           // Crear una instancia de Vino con las instancias de Resenia, Bodega y Varietal
@@ -246,7 +247,9 @@ buttonConfirm.addEventListener("click", async () => {
     const bodegas = await loadBodegas();
     const paises = await loadPaises();
     const provincias = await loadProvincias();
+
     const regiones = await loadRegiones();
+
     const variedades = await loadVarietal();
     const vinos = await loadVinos();
     const reseñas = await loadReseñas();

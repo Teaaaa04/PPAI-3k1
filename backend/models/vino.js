@@ -74,10 +74,10 @@ class Vino {
   // metodos
 
   // buscar datos de la bodega implica buscar su nombre, región y país.
-  buscarDatosBodega(provincias, pais) {
+  buscarDatosBodega(provincias, paises) {
     return [
       this._bodega.nombre,
-      this._bodega.obtenerRegionYPais(provincias, pais),
+      this._bodega.obtenerRegionYPais(provincias, paises),
     ];
   }
 
@@ -98,10 +98,11 @@ class Vino {
 
   buscarVarietales() {
     // devuelve las descripciones de todos los varietales (array)
+
     return this._varietales.map((varietal) => varietal.descripcion);
   }
 
-  calcularPromedioPuntaje() {
+  calcularPuntajePromedio() {
     // devuelve el promedio de puntaje de todas las reseñas
     return (
       this._resenias.reduce((acc, resenia) => acc + resenia.puntaje, 0) /
@@ -109,7 +110,7 @@ class Vino {
     );
   }
 
-  calcularPromedioPuntajeSommelier() {
+  calcularPuntajePromedioSommelier() {
     // devuelve el promedio de puntaje de las reseñas de sommelier
     let reseniasSommelier = this._resenias.filter((resenia) =>
       resenia.sosDeSommelier()

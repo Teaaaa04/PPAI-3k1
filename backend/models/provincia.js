@@ -27,8 +27,13 @@ class Provincia {
   // metodos
   // funcion para obtener el pais de la provincia
   obtenerPais(paises) {
-    let pais = paises.find((pais) => pais.provincias.includes(this));
-    return pais;
+    // encontrar el pais que tiene esta provincia
+    let pais = paises.find((pais) => {
+      return pais.provincias.find(
+        (provincia) => provincia.nombre === this.nombre
+      );
+    });
+    return pais.nombre;
   }
 }
 
