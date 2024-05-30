@@ -18,40 +18,25 @@ function abrirModal(lista) {
   };
 
   function loadTableData(data) {
+    const dataTable = document.getElementById('dataTable');
     dataTable.innerHTML = "";
     data.forEach((item, index) => {
-      let row = `<tr>
-        <td class="px-1 py-4 whitespace-nowrap text-sm text-center text-white bg-red-600">${index}</td>
-        <td class="px-1 py-4 whitespace-nowrap text-sm text-center text-white bg-red-600">${
-          item.nombre
-        }</td>
-        <td class="px-1 py-4 whitespace-nowrap text-sm text-center text-white bg-red-600">${item.puntajePromedio.toFixed(
-          2
-        )}</td>
-        <td class="px-1 py-4 whitespace-nowrap text-sm  text-center text-white bg-red-600">${item.puntajePromedioSommelier.toFixed(
-          2
-        )}</td>
-        <td class="px-1 py-4 whitespace-nowrap text-sm  text-center text-white bg-red-600">
-        ${item.varietal
-          .map((varietal) => {
-            varietal.descripcion;
-          })
-          .join(", ")}
-        </td>
-        <td class="px-1 py-4 whitespace-nowrap text-sm text-center text-white bg-red-600">${
-          item.precio
-        }</td>
-        <td class="px-1 py-4 whitespace-nowrap text-sm  text-center text-white bg-red-600">${
-          item.datosBodega[0] // nombre de la bodega
-        }</td>
-        <td class="px-1 py-4 whitespace-nowrap text-sm text-center text-white bg-red-600">${
-          item.datosBodega[1][0] // region de la bodega
-        }</td>
-        <td class="px-1 py-4 whitespace-nowrap text-sm text-center text-white bg-red-600">${
-          item.datosBodega[1][1] // pais de la bodega
-        }</td>
-        </tr>`;
-
+      let varietalDescriptions = item.varietal.map((varietal) => `<li>${varietal}</li>`).join("");
+      let row = `
+        <tr>
+          <td class="px-2 py-2 whitespace-nowrap text-sm text-center text-white bg-red-600">${index + 1}</td>
+          <td class="px-2 py-2 whitespace-nowrap text-sm text-center text-white bg-red-600">${item.nombre}</td>
+          <td class="px-2 py-2 whitespace-nowrap text-sm text-center text-white bg-red-600">${item.puntajePromedio.toFixed(2)}</td>
+          <td class="px-2 py-2 whitespace-nowrap text-sm text-center text-white bg-red-600">${item.puntajePromedioSommelier.toFixed(2)}</td>
+          <td class="px-2 py-2 whitespace-nowrap text-sm text-center text-white bg-red-600 overflow-hidden text-ellipsis">
+            <ul class="list-disc list-inside">${varietalDescriptions}</ul>
+          </td>
+          <td class="px-2 py-2 whitespace-nowrap text-sm text-center text-white bg-red-600">${item.precio}</td>
+          <td class="px-2 py-2 whitespace-nowrap text-sm text-center text-white bg-red-600">${item.datosBodega[0]}</td>
+          <td class="px-2 py-2 whitespace-nowrap text-sm text-center text-white bg-red-600">${item.datosBodega[1][0]}</td>
+          <td class="px-2 py-2 whitespace-nowrap text-sm text-center text-white bg-red-600">${item.datosBodega[1][1]}</td>
+        </tr>
+      `;
       dataTable.innerHTML += row;
     });
   }
