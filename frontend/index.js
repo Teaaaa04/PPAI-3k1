@@ -259,8 +259,9 @@ buttonConfirm.addEventListener("click", async () => {
     const fechaDesde = document.getElementById("fechaDesde").value;
     const fechaHasta = document.getElementById("fechaHasta").value;
     const tipoReseña = document.getElementById("selectReseña").value;
-
-    //console.log(fechaDesde, fechaHasta, tipoReseña);
+    let inputSeleccionado = document.querySelector(
+      'input[name="formatoReporte"]:checked'
+    ).value;
 
     // CREACION DEL GESTOR
     const gestor = new GestorRankingVinos(
@@ -271,7 +272,15 @@ buttonConfirm.addEventListener("click", async () => {
     );
     let ranking = gestor.opcionGenerarRanking(vinos, provincias, paises);
 
-    abrirModal(ranking);
+    if (tipoReseña == 2 && inputSeleccionado == 3) {
+      abrirModal(ranking);
+    } else {
+      if (tipoReseña == 2 && inputSeleccionado == 1) {
+        console.log("mostarPDF");
+      } else {
+        alert("No se puede visualizar el ranking con los datos seleccionados");
+      }
+    }
   } catch (error) {
     console.error("Error:", error);
   }

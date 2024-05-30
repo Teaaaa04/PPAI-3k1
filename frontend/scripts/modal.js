@@ -4,7 +4,6 @@ function abrirModal(lista) {
   const span = document.getElementsByClassName("close")[0];
   const dataTable = document.getElementById("dataTable");
 
-  console.log(lista);
   loadTableData(lista);
   escondido.classList.remove("hidden");
 
@@ -22,27 +21,34 @@ function abrirModal(lista) {
     dataTable.innerHTML = "";
     data.forEach((item, index) => {
       let row = `<tr>
-        <td class="px-1 py-4 whitespace-nowrap text-sm text-white bg-red-600">${index}</td>
-        <td class="px-1 py-4 whitespace-nowrap text-sm text-white bg-red-600">${
+        <td class="px-1 py-4 whitespace-nowrap text-sm text-center text-white bg-red-600">${index}</td>
+        <td class="px-1 py-4 whitespace-nowrap text-sm text-center text-white bg-red-600">${
           item.nombre
         }</td>
-        <td class="px-1 py-4 whitespace-nowrap text-sm text-white bg-red-600">${item.puntajePromedio.toFixed(
+        <td class="px-1 py-4 whitespace-nowrap text-sm text-center text-white bg-red-600">${item.puntajePromedio.toFixed(
           2
         )}</td>
-        <td class="px-1 py-4 whitespace-nowrap text-sm text-white bg-red-600">${item.puntajePromedioSommelier.toFixed(
+        <td class="px-1 py-4 whitespace-nowrap text-sm  text-center text-white bg-red-600">${item.puntajePromedioSommelier.toFixed(
           2
         )}</td>
-        <td class="px-1 py-4 whitespace-nowrap text-sm text-white bg-red-600">
-          
+        <td class="px-1 py-4 whitespace-nowrap text-sm  text-center text-white bg-red-600">
+        ${item.varietal
+          .map((varietal) => {
+            varietal.descripcion;
+          })
+          .join(", ")}
         </td>
-        <td class="px-1 py-4 whitespace-nowrap text-sm text-white bg-red-600">${
+        <td class="px-1 py-4 whitespace-nowrap text-sm text-center text-white bg-red-600">${
           item.precio
         }</td>
-        <td class="px-1 py-4 whitespace-nowrap text-sm text-white bg-red-600">${
-          item.datosBodega[0]
+        <td class="px-1 py-4 whitespace-nowrap text-sm  text-center text-white bg-red-600">${
+          item.datosBodega[0] // nombre de la bodega
         }</td>
-        <td class="px-1 py-4 whitespace-nowrap text-sm text-white bg-red-600">${
-          item.datosBodega[1]
+        <td class="px-1 py-4 whitespace-nowrap text-sm text-center text-white bg-red-600">${
+          item.datosBodega[1][0] // region de la bodega
+        }</td>
+        <td class="px-1 py-4 whitespace-nowrap text-sm text-center text-white bg-red-600">${
+          item.datosBodega[1][1] // pais de la bodega
         }</td>
         </tr>`;
 
