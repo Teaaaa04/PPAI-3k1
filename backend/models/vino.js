@@ -104,20 +104,27 @@ class Vino {
 
   calcularPuntajePromedio() {
     // devuelve el promedio de puntaje de todas las reseñas
+    let reseniasEnPeriodo = this._resenias.filter((resenia) => {
+      return resenia.esDelPeriodo(fechaDesde, fechaHasta);
+    });
+    console.log(reseniasEnPeriodo);
     return (
-      this._resenias.reduce((acc, resenia) => acc + resenia.puntaje, 0) /
-      this._resenias.length
+      reseniasEnPeriodo.reduce((acc, resenia) => acc + resenia.puntaje, 0) /
+      reseniasEnPeriodo.length
     );
   }
 
   calcularPuntajePromedioSommelier() {
     // devuelve el promedio de puntaje de las reseñas de sommelier
-    let reseniasSommelier = this._resenias.filter((resenia) =>
-      resenia.sosDeSommelier()
-    );
+    let reseniasEnCondicion = this._resenias.filter((resenia) => {
+      return (
+        resenia.esDelPeriodo(fechaDesde, fechaHasta) && resenia.sosDeSommelier()
+      );
+    });
+
     return (
-      reseniasSommelier.reduce((acc, resenia) => acc + resenia.puntaje, 0) /
-      reseniasSommelier.length
+      reseniasEnCondicion.reduce((acc, resenia) => acc + resenia.puntaje, 0) /
+      reseniasEnCondicion.length
     );
   }
 }

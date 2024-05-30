@@ -59,7 +59,6 @@ class GestorRankingVinos {
       fechaHasta,
       vinos
     );
-    // ESTO YA FUNCIONA
 
     let datosVinoReporte = this.buscarDatosParaReporte(
       vinosConReseniaDeSommelier,
@@ -71,7 +70,6 @@ class GestorRankingVinos {
     return vinosRanking;
   }
 
-  // USADO
   buscarVinosConReseniaDeSommelier(fechaDesde, fechaHasta, vinos) {
     const listaADevolver = [];
     vinos.forEach((vino) => {
