@@ -60,18 +60,15 @@ class GestorRankingVinos {
       vinos
     );
     // ESTO YA FUNCIONA
-    console.log(vinosConReseniaDeSommelier);
 
     let datosVinoReporte = this.buscarDatosParaReporte(
       vinosConReseniaDeSommelier,
       provincias,
       paises
     );
-    console.log(datosVinoReporte);
 
-    console.log("mezclando");
     let vinosRanking = this.ordenarVinosPorRanking(datosVinoReporte);
-    console.log(vinosRanking);
+    return vinosRanking;
   }
 
   // USADO

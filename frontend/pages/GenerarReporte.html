@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/styles.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../img/pngwing.com (4).png" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -16,7 +17,6 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
-
     <title>Bonvino</title>
   </head>
   <body class="bg-gradient-to-b from-red-950 to-red-800 h-screen">
@@ -139,7 +139,75 @@
           Generar Reporte
         </button>
       </form>
+      <div class="hidden" id="escondido">
+        <div
+          id="myModal"
+          class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+        >
+          <div class="bg-white rounded-lg shadow-lg p-6 w-10/12 relative">
+            <span
+              class="close absolute top-2 right-2 text-3xl cursor-pointer text-black font-black"
+              >&times;</span
+            >
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-red-700">
+                <tr>
+                  <th
+                    class="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider"
+                  >
+                    #
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+                  >
+                    Nombre
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+                  >
+                    Calificación General
+                  </th>
+                  <th
+                    class="py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+                  >
+                    Calificación Sommelier
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider max-w-xl"
+                  >
+                    Varietal
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+                  >
+                    Precio
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+                  >
+                    Bodega
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+                  >
+                    Pais
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+                  >
+                    Region
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="dataTable" class="bg-red-100 divide-y divide-gray-200">
+                <!-- Filas se agregarán aquí dinámicamente -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </main>
     <script type="module" src="../index.js"></script>
+    <script src="../scripts/modal.js"></script>
   </body>
 </html>

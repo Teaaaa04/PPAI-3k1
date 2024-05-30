@@ -6,6 +6,7 @@ import RegionVitivinicola from "../backend/models/regionVitivinicola.js";
 import Varietal from "../backend/models/varietal.js";
 import Reseña from "../backend/models/resenia.js";
 import GestorRankingVinos from "../backend/services/gestorRankingVinos.js";
+import abrirModal from "./scripts/modal.js";
 // Definicion de la ruta donde se encuentran los objetos
 const ruta = "../../backend/data/objetos.json";
 
@@ -268,8 +269,9 @@ buttonConfirm.addEventListener("click", async () => {
       "",
       tipoReseña
     );
+    let ranking = gestor.opcionGenerarRanking(vinos, provincias, paises);
 
-    gestor.opcionGenerarRanking(vinos, provincias, paises);
+    abrirModal(ranking);
   } catch (error) {
     console.error("Error:", error);
   }
