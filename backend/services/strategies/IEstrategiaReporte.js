@@ -1,5 +1,5 @@
 // Clase base (superclase)
-class IEstretagiaReporte {
+class IEstrategiaReporte {
   buscarDatosVinosParaReporte(
     vinos,
     fechaDesde,
@@ -11,4 +11,4 @@ class IEstretagiaReporte {
   }
 }
 
-export default IEstretagiaReporte;
+export default IEstrategiaReporte;

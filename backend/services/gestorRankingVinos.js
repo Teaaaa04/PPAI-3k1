@@ -106,7 +106,7 @@ class GestorRankingVinos {
     return estrategia;
   }
 
-  // ordenamos los vinosReporte por puntaje promedio sommelier de reseñas de mejor a peor
+  // Ordenamos los vinosReporte por puntaje promedio sommelier de reseñas de mejor a peor
   ordenarVinosPorRanking(datosVinosReporte) {
     let vinosOrdenados = datosVinosReporte.sort((vino1, vino2) => {
       return vino2.puntajePromedioSommelier - vino1.puntajePromedioSommelier;
