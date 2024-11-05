@@ -8,21 +8,22 @@ class Provincia {
   }
 
   // getters
-  get nombre() {
+  // Getter functions
+  getNombre() {
     return this._nombre;
   }
 
-  get regiones() {
-    return this._regiones;
+  getRegiones() {
+    return this.regionesVitivinicolas;
   }
 
-  // setters
-  set nombre(nombre) {
+  // Setter functions
+  setNombre(nombre) {
     this._nombre = nombre;
   }
 
-  set regiones(regiones) {
-    this._regiones = regiones;
+  setRegiones(regiones) {
+    this.regionesVitivinicolas = regiones;
   }
 
   // metodos
@@ -30,11 +31,11 @@ class Provincia {
   // devuelve el pais al que pertenece la provincia, recibe como parametro un array de paises
   obtenerPais(paises) {
     let pais = paises.find((pais) => {
-      return pais.provincias.find(
-        (provincia) => provincia.nombre === this.nombre
-      );
+      return pais
+        .getProvincias()
+        .find((provincia) => provincia.getNombre() === this.getNombre());
     });
-    return pais.nombre;
+    return pais.getNombre();
   }
 }
 

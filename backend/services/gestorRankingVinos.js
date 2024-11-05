@@ -11,44 +11,54 @@ class GestorRankingVinos {
     this._tipoReseniaSeleccionado = tipoReseniaSeleccionado;
   }
 
-  // getters
-  get fechaDesde() {
+  // Getter functions
+  getFechaDesde() {
     return this._fechaDesde;
   }
-  get fechaHasta() {
+
+  getFechaHasta() {
     return this._fechaHasta;
   }
-  get formaVisualizacionSeleccionado() {
+
+  getFormaVisualizacionSeleccionado() {
     return this._formaVisualizacionSeleccionado;
   }
-  get tipoReseniaSeleccionado() {
+
+  getTipoReseniaSeleccionado() {
     return this._tipoReseniaSeleccionado;
   }
-  get vinosConReseniaDeSommelier() {
+
+  getVinosConReseniaDeSommelier() {
     return this._vinosConReseniaDeSommelier;
   }
-  get vinosOrdenados() {
+
+  getVinosOrdenados() {
     return this._vinosOrdenados;
   }
 
-  // setters
-  set fechaDesde(fechaDesde) {
-    this.fechaDesde = fechaDesde;
+  // Setter functions
+  setFechaDesde(fechaDesde) {
+    this._fechaDesde = fechaDesde;
   }
-  set fechaHasta(fechaHasta) {
-    this.fechaHasta = fechaHasta;
+
+  setFechaHasta(fechaHasta) {
+    this._fechaHasta = fechaHasta;
   }
-  set formaVisualizacionSeleccionado(formaVisualizacionSeleccionado) {
-    this.formaVisualizacionSeleccionado = formaVisualizacionSeleccionado;
+
+  setFormaVisualizacionSeleccionado(formaVisualizacionSeleccionado) {
+    this._formaVisualizacionSeleccionado = formaVisualizacionSeleccionado;
   }
-  set tipoReseniaSeleccionado(tipoReseniaSeleccionado) {
-    this.tipoReseniaSeleccionado = tipoReseniaSeleccionado;
+
+  setTipoReseniaSeleccionado(tipoReseniaSeleccionado) {
+    this._tipoReseniaSeleccionado = tipoReseniaSeleccionado;
   }
-  set vinosConReseniaDeSommelier(vinosConReseniaDeSommelier) {
-    this.vinosConReseniaDeSommelier = vinosConReseniaDeSommelier;
+
+  setVinosConReseniaDeSommelier(vinosConReseniaDeSommelier) {
+    this._vinosConReseniaDeSommelier = vinosConReseniaDeSommelier;
   }
-  set vinosOrdenados(vinosOrdenados) {
-    this.vinosOrdenados = vinosOrdenados;
+
+  setVinosOrdenados(vinosOrdenados) {
+    this._vinosOrdenados = vinosOrdenados;
   }
 
   // metodos
@@ -96,10 +106,11 @@ class GestorRankingVinos {
   // buscamos los datos necesarios para el reporte de los vinos con reseñas de sommelier en el período
   buscarDatosParaReporte(vinosConReseniaDeSommelier, provincias, paises) {
     let datosVinosReporte = [];
+
     vinosConReseniaDeSommelier.forEach((vino) => {
       let VinoReporte = {
-        nombre: vino.nombre,
-        precio: vino.precioARS,
+        nombre: vino.getNombre(),
+        precio: vino.getPrecioARS(),
         datosBodega: vino.buscarDatosBodega(provincias, paises), // nombre, región y país
         varietal: vino.buscarVarietales(), // descripción de los varietales
         puntajePromedio: vino.calcularPuntajePromedio(), // puntaje promedio de todas las reseñas en el período

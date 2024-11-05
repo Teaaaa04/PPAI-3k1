@@ -18,50 +18,48 @@ class Bodega {
   }
 
   // getters
-  get coordenadasUbicacion() {
-    return this.coordenadasUbicacion;
+  getCoordenadasUbicacion() {
+    return this._coordenadasUbicacion;
   }
-  get nombre() {
+  getNombre() {
     return this._nombre;
   }
-  get descripcion() {
+  getDescripcion() {
     return this._descripcion;
   }
-  get fechaUltimaActualizacion() {
+  getFechaUltimaActualizacion() {
     return this._fechaUltimaActualizacion;
   }
-  get historia() {
+  getHistoria() {
     return this._historia;
   }
-  get periodoActualizacion() {
+  getPeriodoActualizacion() {
     return this._periodoActualizacion;
   }
-
-  get regionVitivinicola() {
+  getRegionVitivinicola() {
     return this._regionVitivinicola;
   }
 
-  // setters
-  set coordenadasUbicacion(coordenadasUbicacion) {
+  // Setter functions
+  setCoordenadasUbicacion(coordenadasUbicacion) {
     this._coordenadasUbicacion = coordenadasUbicacion;
   }
-  set nombre(nombre) {
+  setNombre(nombre) {
     this._nombre = nombre;
   }
-  set descripcion(descripcion) {
+  setDescripcion(descripcion) {
     this._descripcion = descripcion;
   }
-  set fechaUltimaActualizacion(fechaUltimaActualizacion) {
+  setFechaUltimaActualizacion(fechaUltimaActualizacion) {
     this._fechaUltimaActualizacion = fechaUltimaActualizacion;
   }
-  set historia(historia) {
+  setHistoria(historia) {
     this._historia = historia;
   }
-  set periodoActualizacion(periodoActualizacion) {
+  setPeriodoActualizacion(periodoActualizacion) {
     this._periodoActualizacion = periodoActualizacion;
   }
-
-  set regionVitivinicola(regionVitivinicola) {
+  setRegionVitivinicola(regionVitivinicola) {
     this._regionVitivinicola = regionVitivinicola;
   }
 
@@ -70,8 +68,8 @@ class Bodega {
   // devuelve la region y el pais al que pertenece la bodega
   obtenerRegionYPais(provincia, paises) {
     return [
-      this._regionVitivinicola.nombre,
-      this._regionVitivinicola.obtenerPais(provincia, paises),
+      this.regionVitivinicola.getNombre(),
+      this.regionVitivinicola.obtenerPais(provincia, paises),
     ];
   }
 }

@@ -6,31 +6,37 @@ class Resenia {
     this._puntaje = puntaje; //int
   }
 
-  //getters
-  get comentario() {
+  // Getter functions
+  getComentario() {
     return this._comentario;
   }
-  get esPremium() {
+
+  getEsPremium() {
     return this._esPremium;
   }
-  get fechaResenia() {
+
+  getFechaResenia() {
     return this._fechaResenia;
   }
-  get puntaje() {
+
+  getPuntaje() {
     return this._puntaje;
   }
 
-  //setters
-  set comentario(comentario) {
+  // Setter functions
+  setComentario(comentario) {
     this._comentario = comentario;
   }
-  set esPremium(esPremium) {
+
+  setEsPremium(esPremium) {
     this._esPremium = esPremium;
   }
-  set fechaResenia(fechaResenia) {
+
+  setFechaResenia(fechaResenia) {
     this._fechaResenia = fechaResenia;
   }
-  set puntaje(puntaje) {
+
+  setPuntaje(puntaje) {
     this._puntaje = puntaje;
   }
 

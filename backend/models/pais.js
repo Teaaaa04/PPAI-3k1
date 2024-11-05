@@ -7,21 +7,21 @@ class Pais {
     this._provincias = provincias;
   }
 
-  // getters
-  get nombre() {
+  // Getter functions
+  getNombre() {
     return this._nombre;
   }
 
-  get provincias() {
+  getProvincias() {
     return this._provincias;
   }
 
-  // setters
-  set nombre(nombre) {
+  // Setter functions
+  setNombre(nombre) {
     this._nombre = nombre;
   }
 
-  set provincias(provincias) {
+  setProvincias(provincias) {
     this._provincias = provincias;
   }
 }

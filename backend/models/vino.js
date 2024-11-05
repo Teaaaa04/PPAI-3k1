@@ -19,55 +19,69 @@ class Vino {
     this._resenias = resenias;
   }
 
-  // getters de lo anterior
-  get aniada() {
+  // Getter functions
+  getAniada() {
     return this._aniada;
   }
-  get imagenEtiqueta() {
+
+  getImagenEtiqueta() {
     return this._imagenEtiqueta;
   }
-  get nombre() {
+
+  getNombre() {
     return this._nombre;
   }
-  get notaDeCataBodega() {
+
+  getNotaDeCataBodega() {
     return this._notaDeCataBodega;
   }
-  get precioARS() {
+
+  getPrecioARS() {
     return this._precioARS;
   }
-  get bodega() {
+
+  getBodega() {
     return this._bodega;
   }
-  get varietales() {
-    return this._varietal;
+
+  getVarietales() {
+    return this._varietales;
   }
-  get reseña() {
+
+  getReseña() {
     return this._reseña;
   }
 
-  // setters
-  set aniada(añada) {
-    this._añada = añada;
+  // Setter functions
+  setAniada(aniada) {
+    this._aniada = aniada;
   }
-  set imagenEtiqueta(imagenEtiqueta) {
+
+  setImagenEtiqueta(imagenEtiqueta) {
     this._imagenEtiqueta = imagenEtiqueta;
   }
-  set nombre(nombre) {
+
+  setNombre(nombre) {
     this._nombre = nombre;
   }
-  set notaDeCataBodega(notaDeCataBodega) {
+
+  setNotaDeCataBodega(notaDeCataBodega) {
     this._notaDeCataBodega = notaDeCataBodega;
   }
-  set precioARS(precioARS) {
+
+  setPrecioARS(precioARS) {
     this._precioARS = precioARS;
   }
-  set bodega(bodega) {
+
+  setBodega(bodega) {
     this._bodega = bodega;
   }
-  set varietales(varietales) {
+
+  setVarietales(varietales) {
     this._varietales = varietales;
   }
-  set reseña(reseña) {
+
+  setReseña(reseña) {
     this._reseña = reseña;
   }
 
@@ -76,7 +90,7 @@ class Vino {
   // buscar datos de la bodega implica buscar su nombre, región y país.
   buscarDatosBodega(provincias, paises) {
     return [
-      this._bodega.nombre,
+      this._bodega.getNombre(),
       this._bodega.obtenerRegionYPais(provincias, paises),
     ];
   }
@@ -97,7 +111,7 @@ class Vino {
 
   // busca varietales, devuelve un array con las descripciones de los varietales
   buscarVarietales() {
-    return this._varietales.map((varietal) => varietal.descripcion);
+    return this._varietales.map((varietal) => varietal.getDescripcion());
   }
 
   // calcula el puntaje promedio de todas las reseñas en el período
@@ -107,8 +121,10 @@ class Vino {
     });
     console.log(reseniasEnPeriodo);
     return (
-      reseniasEnPeriodo.reduce((acc, resenia) => acc + resenia.puntaje, 0) /
-      reseniasEnPeriodo.length
+      reseniasEnPeriodo.reduce(
+        (acc, resenia) => acc + resenia.getPuntaje(),
+        0
+      ) / reseniasEnPeriodo.length
     );
   }
 
@@ -121,8 +137,10 @@ class Vino {
     });
 
     return (
-      reseniasEnCondicion.reduce((acc, resenia) => acc + resenia.puntaje, 0) /
-      reseniasEnCondicion.length
+      reseniasEnCondicion.reduce(
+        (acc, resenia) => acc + resenia.getPuntaje(),
+        0
+      ) / reseniasEnCondicion.length
     );
   }
 }

@@ -7,19 +7,21 @@ class Varietal {
     this._porcentajeComposicion = porcentajeComposicion;
   }
 
-  //getters
-  get descripcion() {
+  // Getter functions
+  getDescripcion() {
     return this._descripcion;
   }
-  get porcentajeComposicion() {
+
+  getPorcentajeComposicion() {
     return this._porcentajeComposicion;
   }
 
-  //setters
-  set descripcion(descripcion) {
+  // Setter functions
+  setDescripcion(descripcion) {
     this._descripcion = descripcion;
   }
-  set porcentajeComposicion(porcentajeComposicion) {
+
+  setPorcentajeComposicion(porcentajeComposicion) {
     this._porcentajeComposicion = porcentajeComposicion;
   }
 }
