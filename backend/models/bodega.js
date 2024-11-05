@@ -24,6 +24,7 @@ class Bodega {
   getNombre() {
     return this._nombre;
   }
+
   getDescripcion() {
     return this._descripcion;
   }
