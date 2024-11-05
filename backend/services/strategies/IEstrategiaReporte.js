@@ -1,5 +1,5 @@
 // Clase base (superclase)
-class IEstretegiaReporte {
+class IEstretagiaReporte {
   buscarDatosVinosParaReporte(
     vinos,
     fechaDesde,
@@ -10,3 +10,5 @@ class IEstretegiaReporte {
     throw new Error("Este método debe ser implementado por subclases");
   }
 }
+
+export default IEstretagiaReporte;

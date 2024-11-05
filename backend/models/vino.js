@@ -119,7 +119,6 @@ class Vino {
     let reseniasEnPeriodo = this._resenias.filter((resenia) => {
       return resenia.esDelPeriodo(fechaDesde, fechaHasta);
     });
-    console.log(reseniasEnPeriodo);
     return (
       reseniasEnPeriodo.reduce(
         (acc, resenia) => acc + resenia.getPuntaje(),

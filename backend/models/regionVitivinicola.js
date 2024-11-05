@@ -1,7 +1,7 @@
 class RegionVitivinicola {
-  constructor(descripcion, nombre) {
-    this._descripcion = descripcion;
+  constructor(nombre, descripcion) {
     this._nombre = nombre;
+    this._descripcion = descripcion;
   }
 
   // Getter functions
@@ -10,7 +10,7 @@ class RegionVitivinicola {
   }
 
   getNombre() {
-    return this.nombre;
+    return this._nombre;
   }
 
   // Setter functions
@@ -26,14 +26,11 @@ class RegionVitivinicola {
 
   // devuelve el pais al que pertenece la region vitivinicola, recibe como parametros un array de provincias y un array de paises
   obtenerPais(provincias, paises) {
-    provincias.forEach((provincia) => {
-      console.log(provincia.getRegiones());
-    });
-
+    console.log(provincias);
     let provincia = provincias.find((provincia) => {
-      return provincia
-        .getRegiones()
-        .find((region) => region.getNombre() === this.getNombre());
+      return provincia.getRegiones().find((region) => {
+        return region.getNombre() === this.getNombre();
+      });
     });
 
     return provincia.obtenerPais(paises);

@@ -1,6 +1,7 @@
 // Reseñas de Sommelier: Utiliza solo las reseñas de Sommeliers registrados de los vinos que cumplen con los filtros del ranking. Es decir que debe buscar solo las reseñas de Sommeliers entre las reseñas existentes y considerar esas calificaciones para realizar el ranking.
+import IEstretagiaReporte from "./IEstrategiaReporte.js";
 
-class EstrategiaReseñaSommelier extends IEstretegiaReporte {
+class EstrategiaReseniaSommelier extends IEstretagiaReporte {
   buscarDatosVinosParaReporte(
     vinos,
     fechaDesde,
@@ -35,20 +36,23 @@ class EstrategiaReseñaSommelier extends IEstretegiaReporte {
     return vinosParaReporte;
   }
 
-  buscarDatosParaReporte(vinos, provincias, paises) {
+  // buscamos los datos necesarios para el reporte de los vinos con reseñas de sommelier en el período
+  buscarDatosParaReporte(vinosConReseniaDeSommelier, provincias, paises) {
     let datosVinosReporte = [];
-    vinos.forEach((vino) => {
-      let datosVino = {
+    vinosConReseniaDeSommelier.forEach((vino) => {
+      let VinoReporte = {
         nombre: vino.getNombre(),
-        bodega: vino.getBodega(),
-        anio: vino.getAnio(),
-        puntaje: vino.buscarReseñaSommelier().getPuntaje(),
-        precio: vino.getPrecio(),
-        provincia: vino.getProvincia(),
-        pais: vino.getPais(),
+        precio: vino.getPrecioARS(),
+        datosBodega: vino.buscarDatosBodega(provincias, paises), // nombre, región y país
+        varietal: vino.buscarVarietales(), // descripción de los varietales
+        puntajePromedio: vino.calcularPuntajePromedio(), // puntaje promedio de todas las reseñas en el período
+        puntajePromedioSommelier: vino.calcularPuntajePromedioSommelier(), // puntaje promedio de las reseñas de sommelier en el período
       };
-      datosVinosReporte.push(datosVino);
+      datosVinosReporte.push(VinoReporte);
     });
+
     return datosVinosReporte;
   }
 }
+
+export default EstrategiaReseniaSommelier;

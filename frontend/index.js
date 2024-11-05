@@ -24,8 +24,7 @@ async function loadBodegas() {
           // Convertir regionVitivinicola en una instancia de la clase RegionVitivinicola
           let regionTemp = new RegionVitivinicola(
             bodega.regionVitivinicola.nombre,
-            bodega.regionVitivinicola.descripcion,
-            bodega.regionVitivinicola.fechaUltimaActualizacion
+            bodega.regionVitivinicola.descripcion
           );
 
           // Crear una instancia de Bodega con la instancia de RegionVitivinicola
@@ -52,27 +51,38 @@ async function loadBodegas() {
 // Funcion para cargar el array de paises, con datos extraidos del JSON
 async function loadPaises() {
   try {
-    //Leer el archivo JSON con los paises
-    return fetch(ruta).then(
-      (response) =>
-        response.json().then((data) => {
-          let listaPaises = data[0].pais;
+    // Leer el archivo JSON con los paises
+    return fetch(ruta).then((response) =>
+      response.json().then((data) => {
+        let listaPaises = data[0].pais;
 
-          // Crear un nuevo array para almacenar los objetos creados
-          let paisesTemp = [];
-          listaPaises.forEach((pais) => {
-            paisesTemp.push(new Pais(pais.nombre, pais.provincias));
+        // Crear un nuevo array para almacenar los objetos creados
+        let paisesTemp = [];
+        listaPaises.forEach((pais) => {
+          // Convertir cada provincia en una instancia de la clase Provincia
+          let provinciasTemp = pais.provincias.map((provincia) => {
+            // Convertir cada región en una instancia de la clase RegionVitivinicola
+            let regionesTemp = provincia.regiones.map(
+              (region) =>
+                new RegionVitivinicola(region.nombre, region.descripcion)
+            );
+            // Crear la instancia de Provincia con las regiones creadas
+            return new Provincia(provincia.nombre, regionesTemp);
           });
-          // console.log(paisesTemp);
-          return paisesTemp;
-        })
-      //Devolucion del array
+
+          // Crear la instancia de Pais con las provincias creadas
+          paisesTemp.push(new Pais(pais.nombre, provinciasTemp));
+        });
+
+        return paisesTemp;
+      })
     );
   } catch (error) {
     console.error("Error al cargar el JSON:", error);
   }
 }
 
+// Funcion para cargar el array de provincias, con datos extraidos del JSON
 // Funcion para cargar el array de provincias, con datos extraidos del JSON
 async function loadProvincias() {
   try {
@@ -85,11 +95,17 @@ async function loadProvincias() {
         let provinciasTemp = [];
         listaPais.forEach((pais) => {
           pais.provincias.forEach((provincia) => {
-            provinciasTemp.push(
-              new Provincia(provincia.nombre, provincia.regiones)
+            // Convertir cada region en una instancia de la clase RegionVitivinicola
+            let regionesTemp = provincia.regiones.map(
+              (region) =>
+                new RegionVitivinicola(region.nombre, region.descripcion)
             );
+
+            // Crear la instancia de Provincia con las regiones creadas
+            provinciasTemp.push(new Provincia(provincia.nombre, regionesTemp));
           });
         });
+
         return provinciasTemp;
       })
     );
@@ -116,6 +132,7 @@ async function loadRegiones() {
           });
         });
         // Devolucion del array
+
         return regionesTemp;
       })
     );
@@ -170,8 +187,8 @@ async function loadVinos() {
           // Convertir bodega en una instancia de la clase Bodega
 
           let regionVitivinicolaTemp = new RegionVitivinicola(
-            vino.bodega.regionVitivinicola.descripcion,
-            vino.bodega.regionVitivinicola.nombre
+            vino.bodega.regionVitivinicola.nombre,
+            vino.bodega.regionVitivinicola.descripcion
           );
 
           let bodegaTemp = new Bodega(
@@ -254,6 +271,7 @@ buttonConfirm.addEventListener("click", async () => {
     const provincias = await loadProvincias();
 
     const regiones = await loadRegiones();
+    console.log(regiones);
 
     const variedades = await loadVarietal();
     const vinos = await loadVinos();
