@@ -1,6 +1,6 @@
 // Reseñas de Sommelier: Utiliza solo las reseñas de Sommeliers registrados de los vinos que cumplen con los filtros del ranking. Es decir que debe buscar solo las reseñas de Sommeliers entre las reseñas existentes y considerar esas calificaciones para realizar el ranking.
 
-class EstrategiaReseñaSommelier extends IEstretegiaReporte {
+class EstrategiaReseniaSommelier extends IEstretegiaResenia {
   buscarDatosVinosParaReporte(
     vinos,
     fechaDesde,
@@ -12,7 +12,7 @@ class EstrategiaReseñaSommelier extends IEstretegiaReporte {
       fechaDesde,
       fechaHasta,
       vinos
-    ); //
+    );
 
     let datosVinosReporte = this.buscarDatosParaReporte(
       vinosParaReporte,

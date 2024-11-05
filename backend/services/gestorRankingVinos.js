@@ -64,62 +64,51 @@ class GestorRankingVinos {
   // metodos
   // función principal
   opcionGenerarRanking(vinos, provincias, paises) {
-    let vinosConReseniaDeSommelier = this.buscarVinosConReseniaDeSommelier(
-      fechaDesde,
-      fechaHasta,
-      vinos
+    // Si es 1 --> reseñas normales
+    // Si es 2 --> reseñas de sommelier
+    // Si es 3 --> reseñas de amigos
+    let tiposReseñas = [
+      "Reseñas Normales",
+      "Reseñas de Sommelier",
+      "Reseñas de Amigos",
+    ];
+
+    // Creamos la estrategia
+    let estrategiaResenia = crearEstrategia(
+      tiposReseñas[tipoReseniaSeleccionado]
     );
 
-    let datosVinoReporte = this.buscarDatosParaReporte(
-      vinosConReseniaDeSommelier,
+    // Delegamos la busqueda de los datos de los vinos para el reporte a la estrategia
+    datosVinosReporte = estrategiaResenia.buscarDatosVinosParaReporte(
+      vinos,
+      fechaDesde,
+      fechaHasta,
       provincias,
       paises
     );
 
-    let vinosRanking = this.ordenarVinosPorRanking(datosVinoReporte);
+    // Ordenamos los vinos por ranking
+    let vinosRanking = this.ordenarVinosPorRanking(datosVinosReporte);
+
     return vinosRanking;
   }
 
-  // buscamos los vinos con reseñas de sommelier en el período
-  buscarVinosConReseniaDeSommelier(fechaDesde, fechaHasta, vinos) {
-    const listaADevolver = [];
-    vinos.forEach((vino) => {
-      if (
-        vino.buscarReseñaSommelierEnPeríodo(fechaDesde, fechaHasta) !== null
-      ) {
-        listaADevolver.push(vino);
-      }
-    });
-
-    return listaADevolver;
+  // creacion de la estrategia
+  crearEstrategia(tipoResenia) {
+    let estrategia = null;
+    if (tipoResenia === "Reseñas de Sommelier") {
+      estrategia = new EstrategiaReseñaSommelier();
+    }
+    return estrategia;
   }
 
-  // ordenamos los vinosReporte por puntaje promedio sommelier de reseñas de mejor a peor
+  // Ordenamos los vinosReporte por puntaje promedio sommelier de reseñas de mejor a peor
   ordenarVinosPorRanking(datosVinosReporte) {
     let vinosOrdenados = datosVinosReporte.sort((vino1, vino2) => {
       return vino2.puntajePromedioSommelier - vino1.puntajePromedioSommelier;
     });
     let vinosRanking = vinosOrdenados.slice(0, 10); // tomamos los 10 primeros
     return vinosRanking;
-  }
-
-  // buscamos los datos necesarios para el reporte de los vinos con reseñas de sommelier en el período
-  buscarDatosParaReporte(vinosConReseniaDeSommelier, provincias, paises) {
-    let datosVinosReporte = [];
-
-    vinosConReseniaDeSommelier.forEach((vino) => {
-      let VinoReporte = {
-        nombre: vino.getNombre(),
-        precio: vino.getPrecioARS(),
-        datosBodega: vino.buscarDatosBodega(provincias, paises), // nombre, región y país
-        varietal: vino.buscarVarietales(), // descripción de los varietales
-        puntajePromedio: vino.calcularPuntajePromedio(), // puntaje promedio de todas las reseñas en el período
-        puntajePromedioSommelier: vino.calcularPuntajePromedioSommelier(), // puntaje promedio de las reseñas de sommelier en el período
-      };
-
-      datosVinosReporte.push(VinoReporte);
-    });
-    return datosVinosReporte;
   }
 
   tomarConfirmacion() {}

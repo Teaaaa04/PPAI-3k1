@@ -1,5 +1,5 @@
 // Clase base (superclase)
-class IEstretegiaReporte {
+class IEstretegiaResenia {
   buscarDatosVinosParaReporte(
     vinos,
     fechaDesde,
