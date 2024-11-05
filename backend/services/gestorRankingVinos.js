@@ -1,5 +1,5 @@
 import EstrategiaReseniaSommelier from "./strategies/EstrategiaReseniaSommelier.js";
-
+import EstrategiaReseniaNormal from "./strategies/EstrategiaReseniaNormal.js";
 class GestorRankingVinos {
   constructor(
     fechaDesde,
@@ -81,18 +81,13 @@ class GestorRankingVinos {
     );
 
     // Delegamos la busqueda de los datos de los vinos para el reporte a la estrategia
-    let datosVinosReporte = estrategiaResenia.buscarDatosVinosParaReporte(
+    let vinosRanking = estrategiaResenia.buscarDatosVinosParaReporte(
       vinos,
       fechaDesde,
       fechaHasta,
       provincias,
       paises
     );
-    console.log("Datos de los vinos para el reporte: ");
-    console.log(datosVinosReporte);
-
-    // Ordenamos los vinos por ranking
-    let vinosRanking = this.ordenarVinosPorRanking(datosVinosReporte);
 
     return vinosRanking;
   }
@@ -102,17 +97,12 @@ class GestorRankingVinos {
     let estrategia = null;
     if (tipoResenia === "Reseñas de Sommelier") {
       estrategia = new EstrategiaReseniaSommelier();
-    } // Faltarian las otras estrategias
+    } else if (tipoResenia === "Reseñas Normales") {
+      estrategia = new EstrategiaReseniaNormal();
+    } else {
+      ("Este tipo de reseña no esta disponible");
+    }
     return estrategia;
-  }
-
-  // Ordenamos los vinosReporte por puntaje promedio sommelier de reseñas de mejor a peor
-  ordenarVinosPorRanking(datosVinosReporte) {
-    let vinosOrdenados = datosVinosReporte.sort((vino1, vino2) => {
-      return vino2.puntajePromedioSommelier - vino1.puntajePromedioSommelier;
-    });
-    let vinosRanking = vinosOrdenados.slice(0, 10); // tomamos los 10 primeros
-    return vinosRanking;
   }
 
   tomarConfirmacion() {}

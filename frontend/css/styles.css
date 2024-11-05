@@ -8,3 +8,7 @@ body {
 .fuente {
   font-family: "Playfair Display", serif;
 }
+
+.disabledOption {
+  color: gray;
+}

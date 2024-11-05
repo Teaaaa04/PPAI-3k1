@@ -109,6 +109,18 @@ class Vino {
     }
   }
 
+  // buscar reseñas en el período
+  buscarReseñaEnPeríodo(fechaDesde, fechaHasta) {
+    let listaADevolver = this._resenias.filter((resenia) => {
+      return resenia.esDelPeriodo(fechaDesde, fechaHasta);
+    });
+    if (listaADevolver.length > 0) {
+      return true;
+    } else {
+      return null;
+    }
+  }
+
   // busca varietales, devuelve un array con las descripciones de los varietales
   buscarVarietales() {
     return this._varietales.map((varietal) => varietal.getDescripcion());

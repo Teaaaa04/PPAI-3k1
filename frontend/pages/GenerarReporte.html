@@ -90,7 +90,7 @@
           >
             <option value="1">Reseñas normales</option>
             <option value="2">Reseñas de Sommelier</option>
-            <option value="3">Reseñas de Amigos</option>
+            <option value="3" disabled class="disabledOption">Reseñas de Amigos</option>
           </select>
         </div>
         <div
@@ -147,18 +147,8 @@
             <span class="close absolute top-2 right-2 text-3xl cursor-pointer text-black font-black">&times;</span>
             <div class="overflow-y-auto max-h-full">
               <table class="min-w-full divide-y divide-gray-200 table-fixed">
-                <thead class="bg-red-700">
-                  <tr>
-                    <th class="px-2 py-3 text-center text-xs font-medium text-white uppercase tracking-wider w-1/12">#</th>
-                    <th class="px-2 py-3 text-center text-xs font-medium text-white uppercase tracking-wider w-2/12">Nombre</th>
-                    <th class="px-2 py-3 text-center text-xs font-medium text-white uppercase tracking-wider w-1/12">Calificación General</th>
-                    <th class="px-2 py-3 text-center text-xs font-medium text-white uppercase tracking-wider w-1/12">Calificación Sommelier</th>
-                    <th class="px-2 py-3 text-center text-xs font-medium text-white uppercase tracking-wider w-3/12">Varietal</th>
-                    <th class="px-2 py-3 text-center text-xs font-medium text-white uppercase tracking-wider w-1/12">Precio</th>
-                    <th class="px-2 py-3 text-center text-xs font-medium text-white uppercase tracking-wider w-2/12">Bodega</th>
-                    <th class="px-2 py-3 text-center text-xs font-medium text-white uppercase tracking-wider w-1/12">Región</th>
-                    <th class="px-2 py-3 text-center text-xs font-medium text-white uppercase tracking-wider w-1/12">País</th>
-                  </tr>
+                <thead class="bg-red-700" id="thead">
+                  
                 </thead>
                 <tbody id="dataTable" class="bg-red-100 divide-y divide-gray-200">
                   <!-- Filas se agregarán aquí dinámicamente -->

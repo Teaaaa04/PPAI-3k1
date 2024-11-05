@@ -271,7 +271,6 @@ buttonConfirm.addEventListener("click", async () => {
     const provincias = await loadProvincias();
 
     const regiones = await loadRegiones();
-    console.log(regiones);
 
     const variedades = await loadVarietal();
     const vinos = await loadVinos();
@@ -309,6 +308,7 @@ buttonConfirm.addEventListener("click", async () => {
     );
 
     // invocamos a la funcion opcionGenerarRanking del gestor para obtener el ranking
+
     let ranking = gestor.opcionGenerarRanking(vinos, provincias, paises);
 
     // la pantalla valida que haya reseñas para mostrar
@@ -318,12 +318,12 @@ buttonConfirm.addEventListener("click", async () => {
     }
 
     // la pantalla abre el modal con el ranking
-    if (tipoReseña == 2) {
-      abrirModal(ranking);
-    } else {
+    if (tipoReseña === 3) {
       alert(
         "No se puede visualizar el ranking de los vinos con ese tipo de reseña aún"
       );
+    } else {
+      abrirModal(ranking, tipoReseña);
     }
   } catch (error) {
     console.error("Error:", error);

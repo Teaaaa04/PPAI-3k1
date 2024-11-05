@@ -26,7 +26,6 @@ class RegionVitivinicola {
 
   // devuelve el pais al que pertenece la region vitivinicola, recibe como parametros un array de provincias y un array de paises
   obtenerPais(provincias, paises) {
-    console.log(provincias);
     let provincia = provincias.find((provincia) => {
       return provincia.getRegiones().find((region) => {
         return region.getNombre() === this.getNombre();
