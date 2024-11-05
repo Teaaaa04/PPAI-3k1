@@ -66,6 +66,10 @@ class GestorRankingVinos {
   // metodos
   // función principal
   opcionGenerarRanking(vinos, provincias, paises) {
+    return this.buscarDatosVinosParaReporte(vinos, provincias, paises);
+  }
+
+  buscarDatosVinosParaReporte(vinos, provincias, paises) {
     // Si es 1 --> reseñas normales
     // Si es 2 --> reseñas de sommelier
     // Si es 3 --> reseñas de amigos
