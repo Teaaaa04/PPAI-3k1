@@ -22,7 +22,7 @@ class Bodega {
     return this.coordenadasUbicacion;
   }
   get nombre() {
-    return this._nombre;
+    // return this._nombre;
   }
   get descripcion() {
     return this._descripcion;
